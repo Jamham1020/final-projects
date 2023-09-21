@@ -1,3 +1,5 @@
+# Project 2 Web App and JDBC SQL
+
 You have 2 weeks for this assignment.  
 
 Project description, requirements, what to submit:
