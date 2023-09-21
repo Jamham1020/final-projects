@@ -1,0 +1,115 @@
+/* 
+*
+* Lab 6 Observations and Questions
+*
+*/
+
+jamham@jamham-VirtualBox:~/lab6$ make
+gcc -o threadSync threadSync.c -l pthread -Wall -Werror
+gcc -o threadSync2 threadSync2.c -l pthread -Wall -Werror
+
+Explain what happens when you run the threadSync.c program? 
+After running the threadSync.c program, it shows at the rate of sleep(1) how one thread
+enter it's critical section and when it returns. In total there are 10 threads starting
+from thread 0 to thread 9. After thread 9 is returned, the program will finish and the 
+statement, "Main thread done" will appear. Some of the threads are not in numerical order
+and enters its critical section and return in random orders. After running it again it the results are
+exactly the same on the mlc104 server, but when I run it different times on my vm it;s different. 
+
+
+*********  mlc104 server ***********
+[pham7435@mlc104 lab6]$ ./threadSync
+Thread 3 Entered Critical Section..
+Thread 4 Entered Critical Section..
+Thread 5 Entered Critical Section..
+Thread 6 Entered Critical Section..
+Thread 7 Entered Critical Section..
+Thread 8 Entered Critical Section..
+Thread 9 Entered Critical Section..
+Thread 2 Entered Critical Section..
+Thread 1 Entered Critical Section..
+Thread 0 Entered Critical Section..
+Thread 0 returned
+Thread 1 returned
+Thread 2 returned
+Thread 3 returned
+Thread 4 returned
+Thread 5 returned
+Thread 6 returned
+Thread 7 returned
+Thread 8 returned
+Thread 9 returned
+Main thread done.
+[pham7435@mlc104 lab6]$ ./threadSync
+Thread 3 Entered Critical Section..
+Thread 4 Entered Critical Section..
+Thread 5 Entered Critical Section..
+Thread 6 Entered Critical Section..
+Thread 7 Entered Critical Section..
+Thread 8 Entered Critical Section..
+Thread 9 Entered Critical Section..
+Thread 2 Entered Critical Section..
+Thread 1 Entered Critical Section..
+Thread 0 Entered Critical Section..
+Thread 0 returned
+Thread 1 returned
+Thread 2 returned
+Thread 3 returned
+Thread 4 returned
+Thread 5 returned
+Thread 6 returned
+Thread 7 returned
+Thread 8 returned
+Thread 9 returned
+Main thread done.
+
+************** My VM ***************
+jamham@jamham-VirtualBox:~/lab6$ ./threadSync
+Thread 0 Entered Critical Section..
+Thread 0 returned 
+Thread 1 Entered Critical Section..
+Thread 1 returned 
+Thread 2 Entered Critical Section..
+Thread 3 Entered Critical Section..
+Thread 2 returned 
+Thread 4 Entered Critical Section..
+Thread 3 returned 
+Thread 5 Entered Critical Section..
+Thread 4 returned 
+Thread 7 Entered Critical Section..
+Thread 5 returned 
+Thread 8 Entered Critical Section..
+Thread 6 Entered Critical Section..
+Thread 6 returned 
+Thread 7 returned 
+Thread 8 returned 
+Thread 9 Entered Critical Section..
+Thread 9 returned 
+Main thread done.
+
+jamham@jamham-VirtualBox:~/lab6$ ./threadSync
+Thread 1 Entered Critical Section..
+Thread 0 Entered Critical Section..
+Thread 2 Entered Critical Section..
+Thread 0 returned 
+Thread 1 returned 
+Thread 3 Entered Critical Section..
+Thread 2 returned 
+Thread 4 Entered Critical Section..
+Thread 3 returned 
+Thread 5 Entered Critical Section..
+Thread 4 returned 
+Thread 6 Entered Critical Section..
+Thread 5 returned 
+Thread 7 Entered Critical Section..
+Thread 6 returned 
+Thread 8 Entered Critical Section..
+Thread 7 returned 
+Thread 9 Entered Critical Section..
+Thread 8 returned 
+Thread 9 returned 
+Main thread done.
+jamham@jamham-VirtualBox:~/lab6$ 
+
+
+
