@@ -1,0 +1,42 @@
+/* Lab 5 - Developing multi-threaded applications - Observations and Questions */
+
+$ make
+gcc -g -o threadHello_step1 threadHello_step1.c -Wall -pthread
+gcc -g -o threadHelloFixed_step1_Fixed threadHelloFixed_step1_Fixed.c -Wall -pthread
+
+
+threadHello_step1.c -> Observations and Questions
+
+Q1. Explain what happens when you run this threadHello.c program; can you list how many threads are 
+	created and what values of i are passed? Do you get the same result if you run it multiple times? What if 
+	you are also running some other demanding processes (e.g., compiling a big program, playing a Flash 
+	game on a website, or watching streaming video) when you run this program? 
+	
+	A1. When I ran threadHello.c program it lists out 10 threads with negative values and the iteration for it are all 0. The first statement returns 'Thread 0 returned',
+		then follow by 'Hello from thread -807492032 with iteration 0', the it starts again with the 'hello' statement with the following iteration
+		all 0's. Then it run backs to the statement 'Thread 1 returned' in numerical order. After running the program again the results are somewhat different with the statements
+		but they are all still with negative thread and the same iteration of 0's. Each of the 10 threads executes the function go(). The main thread then waits for each of these 
+		threads to end using pthread_join() before it continues. On multiple runs, I get different outputs and this is because the threads will be scheduled differently in each run. 
+		And since the address of i is passed to the go() function, it may be because the go() function is incremented first before the newly created thread has been executed throught the 
+		printf() function. Which results in runs with multiple threads that print out the same iteration value. If other demanding programs are run with this program, the output will still be different
+		everytime its run.
+ 
+Q2. The function go() has the parameter arg passed a local variable. Are these variables per-thread or 
+	shared state? Where does the compiler store these variables’ states? 
+	
+	A2. The function go() that has the parameter arg passed a local variable is variable on the stack, so a copy
+		is created for each thread. But in the given code, the value in arg is the address of the variable i. Therefore,
+		in the given code the arg pointer points to the same location for all threads.
+ 
+Q3. The main() has local variable i. Is this variable per-thread or shared state? Where does the compiler 
+	store this variable? 
+	
+	A3. The variable i in main() is a shared state. There is only one copy and it is a stack variable which goes
+		out of scope when the main() function ends.
+ 
+Q4.	Write down your observations. You probably have seen that there is a bug in the program, where 
+	threads may print same values of i. Why? 
+	
+	A4. The bug is due to the fact that the threads may be scheduled in any order. When the hello message is printed, the dereferencing
+		of the arg pointer gives the value since it points to variable in the main() function. Therefore the iteration number is wrongly 
+		printed. Any of the threads may end up printing a wrong value for the iteration.
