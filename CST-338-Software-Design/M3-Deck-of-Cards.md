@@ -3,11 +3,15 @@
 This is a team assignment
 
 Understand the Class and Problem
+
 We endeavor to set up some classes that can be used in future programs that involve playing card games with a human, or simulating card games entirely by a computer.  There are three  basic classes we'll need this week:
 
-Card:  A class like the one presented in the modules, but with a few changes.
-Hand:  A class that represents the cards held by a single player.
-Deck:  A class that represents the source of the cards for dealing and, as the game progresses, the place from which players can receive new cards (say, as they pick cards "from the deck" or when future hands are to be dealt from the same deck).  Recall this picture, which relates the Deck to the various Hands that it creates through the process called "dealing".
+- Card:  A class like the one presented in the modules, but with a few changes.
+- Hand:  A class that represents the cards held by a single player.
+- Deck:  A class that represents the source of the cards for dealing and, as the game progresses, the place from which   
+         players can receive new cards (say, as they pick cards "from the deck" or when future hands are to be dealt from 
+         the same deck).  Recall this picture, which relates the Deck to the various Hands that it creates through the 
+         process called "dealing".
 Here  are eight cards, each of which contains both a value ('A', '2', '3', ... 'T', 'J', 'Q',' K') and a suit (spades ♠, hearts ♥, diamonds ♦, clubs ♣)![pic_of_cards](https://github.com/Jamham1020/final-projects/assets/64275401/99661ebb-7698-4555-a61f-3c9035a89f66)
 
 
