@@ -20,9 +20,15 @@ Two Words HERE !!
 
 ## Grading Objectives 
 For TCP and for UDP each: (30 + 30 = 60 points)
+
 (5 points) Socket set up correctly on server 
+
 (5 points) Socket set up correctly on client 
+
 (5 points) Server waits for input 
+
 (5 points) Client sends message to server
+
 (5 points) Server takes input and changes it to all CAPS
+
 (5 points) Client receives and prints out the modified message.
