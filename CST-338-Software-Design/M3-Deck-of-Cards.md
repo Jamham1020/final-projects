@@ -51,21 +51,31 @@ Include three members:
    Suit suit;
    boolean cardError;
   ```
+
 Public Methods
-Card(char value, Suit suit) - The constructor should call the proper mutator(s).  Overload this to cope with a client that wants to instantiate without parameters and use 'A' and 'spades' as the default value and suit when not supplied.  Provide at least two constructors -- no parameters and all parameters -- or more if you wish.  Because we have the cardError member, the constructor (via the mutator), can set that member when it gets bad data; it does not have to assign default values upon receipt of bad data.  This is a new technique for us.  Again, default card (no parameters passed) is the ('A', spades).
-Card(Card origCard) - a copy constructor that will create a duplicate of the original, which is not a reference.
+
+- **Card(char value, Suit suit)** - The constructor should call the proper mutator(s).  Overload this to cope with a client that wants to instantiate without parameters and use 'A' and 'spades' as the default value and suit when not supplied.  Provide at least two constructors -- no parameters and all parameters -- or more if you wish.  Because we have the cardError member, the constructor (via the mutator), can set that member when it gets bad data; it does not have to assign default values upon receipt of bad data.  This is a new technique for us.  Again, default card (no parameters passed) is the ('A', spades).
+
+- **Card(Card origCard)** - a copy constructor that will create a duplicate of the original, which is not a reference.
 string toString() - a stringizer that the client can use to display the card.  It provides a clean representation of the card.  If cardError == true, it should return correspondingly reasonable reflection of this fact (something like "[ invalid ]" rather than a suit and value).
-boolean set(char value, Suit suit) - a mutator that accepts the legal values established in the earlier section.  When bad values are passed, cardError is set to true and other values can be left in any state (even partially set). If good values are passed, they are stored and cardError is set to false.  Make use of the private helper, listed below.
-Accessors for suit and value, (set() takes the place of the individual mutators)
-Accessor for cardError, since this is calculated, it should not have a mutator.
-boolean equals(Card card) - returns true if all the fields (members) are identical and false, otherwise.
+
+- **boolean set(char value, Suit suit)** - a mutator that accepts the legal values established in the earlier section.  When bad values are passed, cardError is set to true and other values can be left in any state (even partially set). If good values are passed, they are stored and cardError is set to false.  Make use of the private helper, listed below.
+  
+- **Accessors for suit and value**, (set() takes the place of the individual mutators)
+  
+- **Accessor for cardError**, since this is calculated, it should not have a mutator.
+
+- **boolean equals(Card card)** - returns true if all the fields (members) are identical and false, otherwise.
+  
 Private Methods
-boolean isValid(char value, Suit suit) - a private helper method that returns true or false, depending on the legality of the parameters.  Note that, although it may be impossible for suit to be illegal (due to its enum-ness), we pass it, anyway, in anticipation of possible changes to the type from enum to, say, char or int, someday.  We only need to test value, at this time.
+
+- **boolean isValid(char value, Suit suit)** - a private helper method that returns true or false, depending on the legality of the parameters.  Note that, although it may be impossible for suit to be illegal (due to its enum-ness), we pass it, anyway, in anticipation of possible changes to the type from enum to, say, char or int, someday.  We only need to test value, at this time.
  
 
 Test of Card class
-Create a main() that is in a class, like Assig3, and then instantiate three cards, two legally, and one illegally. Print all three out and confirm. Then make good card bad by set() with an illegal value, and change the initial illegal card to a legal one by setting a legal value.
 
+Create a main() that is in a class, like Assig3, and then instantiate three cards, two legally, and one illegally. Print all three out and confirm. Then make good card bad by set() with an illegal value, and change the initial illegal card to a legal one by setting a legal value.
+```
 /* ------------------------------------------------------- 
 
 A of spades
@@ -76,25 +86,39 @@ J of clubs
 Q of spades
 J of clubs
 ------------------------------------------------------- */
-Phase 2: The Hand Class
+```
+
+### Phase 2: The Hand Class
+
 Static Class Constants
+
 Define a public int value like MAX_CARDS and set it to something like 50 or 100 so a runaway program can't try to create a monster array.
 
 Private Member Data
+
+```
    Card[] myCards;
    int numCards;
+```
 Public Methods
-Hand() - a default constructor.
-void resetHand() - remove all cards from the hand (in the simplest way).
-boolean takeCard(Card card) - adds a card to the next available position in the myCards array.  This is an object copy, not a reference copy, since the source of the Card might destroy or change its data after our Hand gets it -- we want our local data to be exactly as it was when we received it.
-Card playCard() - returns and removes the card in the top occupied position of the array. If there are no more cards, return a "bad" card.
-String toString() - a stringizer that the client can use to display the entire hand.
-Accessor for numCards.
-Card inspectCard(int k) - Accessor for an individual card.  Returns a card with cardError = true if k is bad.
+
+- **Hand()** - a default constructor.
+- **void resetHand()** - remove all cards from the hand (in the simplest way).
+- **boolean takeCard(Card card)** - adds a card to the next available position in the myCards array.  This is an object 
+    copy, not a reference copy, since the source of the Card might destroy or change its data after our Hand gets it -- we 
+    want our local data to be exactly as it was when we received it.
+- **Card playCard()** - returns and removes the card in the top occupied position of the array. If there are no more 
+    cards, return a "bad" card.
+- **String toString()** - a stringizer that the client can use to display the entire hand.
+- **Accessor for numCards.**
+- **Card inspectCard(int k)** - Accessor for an individual card.  Returns a card with cardError = true if k is bad.
+  
 Test of Hand class
+
 Create between two and five explicit Card objects and one Hand object. Use takeCard() on these few cards (resulting in many, unavoidable "duplicates" in the hand)  in a loop to populate the hand until the maximum allowable cards is met (use this criterion to end the loop).  Display the hand using toString().  Next,  play each card in a loop, until the hand is empty. Display the card played as it is played, and finally, display the (now empty)  hand, verifying that no cards remain.  At some point in your program, test inspectCard() with both legal and illegal int arguments.
 
 Example Test Run of Hand Class
+```
 /* -------------------------------------------------------------------------
 Hand full
 After deal
@@ -222,33 +246,45 @@ Playing 3 of clubs
 After playing all cards
 Hand =  (  )
 ----------------------------------------------------------------------- */
- 
+ ```
 
-Phase 3: The Deck Class
+### Phase 3: The Deck Class
+
 Public Static Class Constants
-Define a public final int value like MAX_CARDS, and initialize it to allow a maximum of six packs (6×52 cards).
+
+- Define a public final int value like MAX_CARDS, and initialize it to allow a maximum of six packs (6×52 cards).
+
 Private Static Member Data
-Card[] masterPack
+
+- Card[] masterPack
 This is a private static Card array, masterPack[], containing exactly 52 card references, which point to all the standard cards.   It will enable us to avoid capriciously and repeatedly declaring the same 52 cards which are needed as the game proceeds.  In other words, once we have, say, a ('6', spades) Card constructed and stored (inside this masterPack[]), we use that same instance whenever we need it as a source to copy in various places, notably during a re-initialization of the Deck object;  it will always be in the masterPack[] array for us to copy.
 
 Private Member Data
+```
    Card[] cards;
    int topCard;
+```
 Public Methods
-Deck(int numPacks) - a constructor that populates the arrays and assigns initial values to members.  Overload so that if no parameters are passed, 1 pack is assumed.
-void init(int numPacks) - re-populate cards[] with the standard 52 × numPacks cards.  We should not repopulate the static array, masterPack[], since that was done once, in the (first-invoked) constructor and  never changes.
- void shuffle() - mixes up the cards with the help of the standard random number generator.
-Card dealCard() - returns and removes the card in the top occupied position of cards[]. Make sure there are still cards available.  This is an object copy, not a reference copy, since the source of the Card might destroy or change its data after it is sent out.  If there are no more cards, return a "bad" card.
-An accessor for the int, topCard (no mutator.)
-Card inspectCard(int k) - Accessor for an individual card.  Returns a card with cardError = true if k is bad.  Also returns an object copy, not a reference copy.
+
+- **Deck(int numPacks)** - a constructor that populates the arrays and assigns initial values to members.  Overload so that if no parameters are passed, 1 pack is assumed.
+- **void init(int numPacks)** - re-populate cards[] with the standard 52 × numPacks cards.  We should not repopulate the static array, masterPack[], since that was done once, in the (first-invoked) constructor and  never changes.
+- **void shuffle()** - mixes up the cards with the help of the standard random number generator.
+- **Card dealCard()** - returns and removes the card in the top occupied position of cards[]. Make sure there are still cards available.  This is an object copy, not a reference copy, since the source of the Card might destroy or change its data after it is sent out.  If there are no more cards, return a "bad" card.
+- An accessor for the int, topCard (no mutator.)
+- **Card inspectCard(int k)** - Accessor for an individual card.  Returns a card with cardError = true if k is bad.  Also returns an object copy, not a reference copy.
+  
 Private Methods
-static void allocateMasterPack() - this is a private method that will be called by the constructor.  However, it has to be done with a very simple twist:  even if many Deck objects are constructed in a given program, this static method will not allow itself to be executed more than once.  Since masterPack[] is a static, unchanging, entity, it need not be built every time a new Deck is instantiated.  So this method needs to be able to ask itself, "Have I been here before?", and if the answer is "yes", it will immediately return without doing anything;  it has already built masterPack[] in a previous invocation.
+
+- **static void allocateMasterPack()** - this is a private method that will be called by the constructor.  However, it has to be done with a very simple twist:  even if many Deck objects are constructed in a given program, this static method will not allow itself to be executed more than once.  Since masterPack[] is a static, unchanging, entity, it need not be built every time a new Deck is instantiated.  So this method needs to be able to ask itself, "Have I been here before?", and if the answer is "yes", it will immediately return without doing anything;  it has already built masterPack[] in a previous invocation.
+  
 Test of Class Deck
+
 Declare a deck containing two packs of cards. Do not shuffle.  Deal all the cards in a loop until the deck is empty (dealt directly to the display/screen, not to any Hand objects just yet).  Display each card as it comes off the deck.  Next, reset the deck by initializing it again (to the same two packs).  Shuffle the deck this time, and re-deal to the screen in a loop again. Notice that the cards are now coming off in a random order.
 
 Repeat this double deal, unshuffled, then shuffled, but this time using a single pack deck.
 
 Example Test Run of Card Class
+```
 /* ---------------------------------------------------------
 K of Spades /  Q of Spades /  J of Spades /  T of Spades /  9 of Spades /  8 of
 Spades /  7 of Spades /  6 of Spades /  5 of Spades /  4 of Spades /  3 of Spade
@@ -315,7 +351,11 @@ f Clubs /  Q of Hearts /  T of Diamonds /  7 of Hearts /  8 of Hearts /
 
 Press any key to continue . . .
 --------------------------------------------------------- */
-Phase 4: The Deck and Hand Classes
+
+```
+
+### Phase 4: The Deck and Hand Classes
+
 It is now time to allow your Deck class to interact with your Hand class.  Don't add anything to the two classes, but do everything in this phase from within your main() client.
 
 Ask the user (interactively) to select the number of players (a number from 1 to 10).  That's one question, one numeric answer, and no further user-interaction.  Once you have validated a legal value, instantiate a single-pack Deck object without shuffling, deal a deck into that many Hand objects, dealing all cards until the deck is empty.  Since the number of players chosen by the user may not divide evenly into 52, the number of cards dealt into the various hands might differ, but only by, at most, one.  Display all the hands after the deal. 
@@ -327,6 +367,8 @@ To be clear, dealing to hands means dealing a single card to each hand, until al
 **You don't need any more classes than the ones we've already created.  Put everything in one main().
 
 Example of One of Possibly Many Test Runs of Deck + Card Classes
+
+```
 --------------- run #2 ----------------------------------
 
 How many hands? (1 - 10, please): 6
@@ -371,6 +413,8 @@ Hearts, K of Spades, A of Spades )
 
 Press any key to continue . . .
 --------------------------------------------------------- */
+```
+
 For this part, you will be graded on how efficiently you put together these two classes.  Use what you know about arrays, loops, the methods available in the Deck and Hand classes -- even testing user input for valid in-range response --  to give a clean, short and completely tested client that proves that your Deck can feed the number of Hands requested by the user.  There is some amount of creativity and variability allowed in this part, and any two correct solutions will look very different.  You can implement this in any way that interprets the instructions.  Yet, I can and will deduct when I see basic programming concepts misused, deduction amounts commensurate with the type of infraction.
 
 Output: hand in only the output from Phase 3 and Phase 4.
