@@ -9,7 +9,8 @@
 --  (LINE_ITEM.Quantity*Line_ITEM.UnitPrice) -> PRODUCT_SALE.Total 
 -- These are the transformations that were done in the HSD Operational Database to the HSDDW.
 -- HSDDW
--- 
+-- Comments: #1 missing transformation for the product_sales the quantity, unitprice and total from the line_item table are inserted as aggregate functions SUM and MIN used #2 An easier/cleaner way to do this one is to just use the subTotal from the invoice table. 
+-- Also missing invoice number which requires the invoice table so you wouldn't need customer table for the customerid. #4 I don't see insert with added column for payment_type_id
 
 -- 2 Load data for table SALES_FOR_RFM  
 insert into SALES_FOR_RFM(TimeID, CustomerID, PreTaxTotalSales)
