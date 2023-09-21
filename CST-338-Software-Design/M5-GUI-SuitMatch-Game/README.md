@@ -26,7 +26,7 @@ The five bullets will be done in three phases.  You should hand in three complet
 ## Download the Card .gifs
 The GNU Free Software Foundation provides code and images for playing-cards that are public domain.  
 I prepared a .zip file which contains a .gif for every card with some minor name changes.  
-Download the zipped image file **(images.zip)**https://csumb.instructure.com/courses/15941/files/2227363/download?download_frd=1
+Download the zipped image file **(images.zip)
 
 After you unzip them, you will have a single folder called images that contains all the .gif files.  Move that folder to your [java workspace]/[project name] directory.  If your project is named Assignment5, and your Eclipse workspace is named workspace, then move images folder to workspace/Assignment5.  Since your program considers Assignment5 to be the root directory, all .gif files can be referenced from your program using names like "images/3S.gif" for, say, 3 of spades.
 
@@ -104,19 +104,19 @@ public class Assig5
    }
 }
 ```
-
-Card Room
-
-  
+![Card Room](https://github.com/Jamham1020/final-projects/assets/64275401/767795ec-c40f-4d18-9062-889d647d7c79)
 
 Hand in a main class that accomplishes this as the first of three programs.
 
-Phase 2: Encapsulating Layount and Icons into CardTable and GUICard Classes
+## Phase 2: Encapsulating Layount and Icons into CardTable and GUICard Classes
+
 The second part creates a separate CardTable class that extends JFrame. This class will control the positioning of the panels and cards of the GUI. We also create a new GUICard class that manages the reading and building of the card image Icons. As a result, some of the machinery and statics that we debugged in the first phase of the main will be moved into one or the other of these two new classes.
 
-CardTable Class (subclassed from JFrame)
+### CardTable Class (subclassed from JFrame)
+
 Include five members:
 
+```
    static int MAX_CARDS_PER_HAND = 56;
    static int MAX_PLAYERS = 2;  // for now, we only allow 2 person games
    
@@ -124,54 +124,68 @@ Include five members:
    private int numPlayers;
 
    public JPanel pnlComputerHand, pnlHumanHand, pnlPlayArea;
- 
+ ```
 
 These members are needed is to establish the grid layout for the JPanels, the organization of which depends on how many cards and players will be displayed. We'll provide an accessor, but no mutator (other than the constructor) for these members.  Here are the public instance methods:
 
-CardTable(String title, int numCardsPerHand, int numPlayers) - The constructor filters input, adds any panels to the JFrame, and establishes layouts according to the general description below.
-Accessors for the two instance members.
+- CardTable(String title, int numCardsPerHand, int numPlayers) - The constructor filters input, adds any panels to the JFrame, and establishes layouts according to the general description below.
+
+- Accessors for the two instance members.
+
 Note: We will use three Public JPanels, one for each hand (player-bottom and computer-top) and a middle "playing" JPanel.  The client (below) will generate the human's cards at random and will be visible in the bottom JPanel, while the computer's cards will be chosen (again, by the client) to be all back-of-card images in the top JPanel.  The middle JPanel will display cards that are "played" by the computer and human during the conflict.  Let's assume that each player plays one card per round, so for a 2-person game (computer + human) there will be exactly two cards played in the central region per round of battle.  My client chose a joker for the two central cards, just so we would have something to see in the playing region. 
 
-GUICard Class
+### GUICard Class
 This class is the benefactor of most of the GUI machinery we tested in Phase 1. It will read the image files and store them in a static Icon array. Rather than a 1-D array of Phase 1, this will be a 2-D array to facilitate addressing the value and suit of a Card in order get its Icon. While simple in principle (just read the Icons and store them in an array for client use), the details are subtle. We have to be able to convert from chars and suits to ints, and back again, in order to find the Icon for any given Card object. The overview of the class data and methods, shown below, will suggest the right approach and should take the mystery out of this class.
 
 Include three members:
 
+```
  private static Icon[][] iconCards = new ImageIcon[14][4]; // 14 = A thru K + joker
  private static Icon iconBack;
  static boolean iconsLoaded = false;
+```
+
 The 52 + 4 jokers Icons will be read and stored into the iconCards[][] array.  The card-back image in the iconBack member.  None of these data need to be stored more than once, so this is a class without instance data.  This class is used is to produce an image icon when the client needs one. 
 
 To begin, we need a method that generates the image Icon array from files:
 
-static void loadCardIcons() - the code for this was fundamentally done in Phase 1.  The difference here is that we are storing the Icons in a 2-D array.  Don't require the client to call this method.  Think about where you would need to call it and how can you avoid having the method reload the icons after it has already loaded them once.  Hint:  Call this method any time you might need an Icon, but make sure that it loads the entire array the first time it is called, and does nothing any later time.
+- static void loadCardIcons() - the code for this was fundamentally done in Phase 1.  The difference here is that we are storing the Icons in a 2-D array.  Don't require the client to call this method.  Think about where you would need to call it and how can you avoid having the method reload the icons after it has already loaded them once.  Hint:  Call this method any time you might need an Icon, but make sure that it loads the entire array the first time it is called, and does nothing any later time.
+  
 The primary public method offered by this class:
 
-static public Icon getIcon(Card card) - This method takes a Card object from the client, and returns the Icon for that card.  It would be used when the client needs to instantiate or change a JLabel. It can return something like:
+- static public Icon getIcon(Card card) - This method takes a Card object from the client, and returns the Icon for that card.  It would be used when the client needs to instantiate or change a JLabel. It can return something like:
+```
 return iconCards[valueAsInt(card)][suitAsInt(card)];
+```
+
 There is another method that returns the card-back image:
 
-static public Icon getBackCardIcon() - this one is even simpler than getIcon().
+- static public Icon getBackCardIcon() - this one is even simpler than getIcon().
+
 The above three methods comprise the essential part of the GUICard class.  Everything else is support for these three, so you can work off my implied suggestions, or you can build the class from scratch as you wish.  Just make sure you are efficient.
 
-Code From Prior Assignments
+### Code From Prior Assignments
+
 We are going to use the classes from Module 3 (Card, Hand, and Deck) but we need to add a couple of things.
 
-Card class
+### Card class
 
-Adjust for the joker. (Even though there are 4 card icons, think of them as one type, X )
+- Adjust for the joker. (Even though there are 4 card icons, think of them as one type, X )
+
 We need a way to know which card is Lower when we compare them for the game later.  Create the following array and method(s):
 
-public static char[] valuRanks - put the order of the card values in here with the smallest first, include 'X' for a joker
-static void arraySort(Card[], int arraySize) - will sort the incoming array of cards using a bubble sort routine.  You can break this up into smaller methods if it gets over 20 lines or so.
-Hand class
+- public static char[] valuRanks - put the order of the card values in here with the smallest first, include 'X' for a joker
+- static void arraySort(Card[], int arraySize) - will sort the incoming array of cards using a bubble sort routine.  You can break this up into smaller methods if it gets over 20 lines or so.
 
- void sort() - calls the new arraySort() in the Card class
-Adjust for the joker by adding 4 empty spots to the Card[] array per pack.
-Adjust the playCard() method to account for possible empty spaces in the array.
-Do NOT add jokers to the masterPack[] because they will be added by the CardGameOutline class later on.
-In order for playCard() to work in the cardGameOutline class, add the following to the Hand class.  This will remove the card at a location and slide all of the cards down one spot in the myCards array. 
+### Hand class
 
+- void sort() - calls the new arraySort() in the Card class
+- Adjust for the joker by adding 4 empty spots to the Card[] array per pack.
+- Adjust the playCard() method to account for possible empty spaces in the array.
+- Do NOT add jokers to the masterPack[] because they will be added by the CardGameOutline class later on.
+- In order for playCard() to work in the cardGameOutline class, add the following to the Hand class.  This will remove the card at a location and slide all of the cards down one spot in the myCards array. 
+
+```
    public Card playCard(int cardIndex)
    {
       if ( numCards == 0 ) //error
@@ -192,31 +206,39 @@ In order for playCard() to work in the cardGameOutline class, add the following 
       
       return card;
     }
-Deck class
+```
 
-Adjust for the joker by adding 4 spots in the Card[] array.
+### Deck class
+
+- Adjust for the joker by adding 4 spots in the Card[] array.
+
 Add methods for adding and removing cards from the deck as well as a sort method. (these will be using in the CardGameOutline given in Phase 3)
 
-boolean addCard(Card card) - make sure that there are not too many instances of the card in the deck if you add it.  Return false if there will be too many.  It should put the card on the top of the deck.
-bollean removeCard(Card card) - you are looking to remove a specific card from the deck.  Put the current top card into its place.  Be sure the card you need is actually still in the deck, if not return false.
-void sort() - put all of the cards in the deck back into the right order according to their values.  Is there another method somewhere that already does this that you could refer to?
-int getNumCards() - return the number of cards remaining in the deck.
-Main class
+- boolean addCard(Card card) - make sure that there are not too many instances of the card in the deck if you add it.  Return false if there will be too many.  It should put the card on the top of the deck.
+- boolean removeCard(Card card) - you are looking to remove a specific card from the deck.  Put the current top card into its place.  Be sure the card you need is actually still in the deck, if not return false.
+- void sort() - put all of the cards in the deck back into the right order according to their values.  Is there another method somewhere that already does this that you could refer to?
+- int getNumCards() - return the number of cards remaining in the deck.
+
+### Main class
 
 You will also need a method that will give you a random new card.  It is a main class method.  
 
-static Card randomCardGenerator() - returns a new random card for the main to use in its tests. This should include jokers because it will only be used in this phase and not in phase 3.
+- static Card randomCardGenerator() - returns a new random card for the main to use in its tests. This should include jokers because it will only be used in this phase and not in phase 3.
   
 
-Client for Phase 2
+### Client for Phase 2
 The main class needs to define the specific JLabel arrays that will go into each of CardTable's JPanels. You will need NUM_CARDS_PER_HAND JLabels for the player and the computer (each), even though the computer only uses one Icon (back-of-card). We also want two Icon JLabels for the central JPanel (these are the two cards played by computer and human, each turn). But we also need to some text below each of the two center icons to we know who played which card ( "Computer" or "You", so, we'll really need four labels in this central play JPanel : two for card images and two for text "Computer" and "You". Since we want the text directly below the icon, one way to do this is to make your central playing panel a 2x2 Grid Layout, where the top two positions will be images and the bottom two will be text that describe the images. Hint: to center text in a label, use
-
+```
    myLabel = new JLabel( "My Text", JLabel.CENTER );
+```
+
 The net result should be cards we can see (our hand) in the lower JPanel , cards that we can't see -- except for the card backs -- in the upper JPanel (the computer's hand) and a central playing region which would represent two cards, one each played by the user and the computer. These two cards depend on what game we are playing, the rules, and the goal.  Based on these two cards played, either we or the computer win that round and then we go on to the next round. For this phase, we don't worry about strategy or rules or winning -- we just want to see two cards in the central JPanel so we know they are correctly positioned for later program development.  Here's a partial picture of a basic solution:
 
-Card Table  
+![ass_5_shot_2-1](https://github.com/Jamham1020/final-projects/assets/64275401/a932ec31-1c2a-4f76-9963-3dbe295e23f9)
+
 You job is to simply produce this output using the classes and methods suggested.  Here is an idea for a main() that you can use to get started:
 
+```
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.*;
@@ -258,15 +280,19 @@ public class Assig5
       // show everything to the user
       myCardTable.setVisible(true);
    }
-Phase 3: Adding CardGameOutline and creating the game "Suit Match"
+```
+
+## Phase 3: Adding CardGameOutline and creating the game "Suit Match"
  
 
 We will start by just copying the CardGameOutline. Download the file here. Download Download the file here. Use it to generate the hands.   It makes sure that cards come in and out smoothly in a deck using the methods that you added to the Card, Hand, and Deck classes.
 
  
 
-New for the Main:
+### New for the Main:
 Start with something like this:
+
+```
 
       numPacksPerDeck = 1;
       numJokersPerPack = 2;
@@ -277,21 +303,26 @@ Start with something like this:
             numPacksPerDeck, numJokersPerPack,  
             numUnusedCardsPerPack, unusedCardsPerPack, 
             NUM_PLAYERS, NUM_CARDS_PER_HAND);
+```
 Later, you can use method invocations like
+```
 
    ...   SuitMatchGame.getHand(1).inspectCard(k)...
+```
+
 to access the human player's cards or the computer's cards for the game below.  So you instantiate a CardGameOutline object, deal the cards, and then read the player's hand, one-card-a-time, producing or updating a JLabel for each card.
 
 The source code so far is exactly the same as Phase 2, except:
 
-You instantiate a CardGameOutline object at the top of main().
+1. You instantiate a CardGameOutline object at the top of main().
 
-You deal() from it (one statement).
+2. You deal() from it (one statement).
 
-In the section where you // CREATE LABELS ...,  instead of using randomCardGenerator() to pick an Icon, you use inspectCard() to do so.
+3. In the section where you // CREATE LABELS ...,  instead of using randomCardGenerator() to pick an Icon, you use inspectCard() to do so.
 
-Make sure that it produces the same output as Phase 2 before coding your game below.
-  5. "Suit Match" Game
+4. Make sure that it produces the same output as Phase 2 before coding your game below.
+   
+5. "Suit Match" Game
 
 --You are now perfectly positioned to write a game.  You will need an action listener and some rules.  A simple game would be "Suit Match" in which you and the computer each play a card.  If the second player can match the suit, then they take both cards, but if not, then the first player gets the cards(which you place somewhere in a winnings[] array, not your hand).  The value does not matter. You have to add JLabels like "You Win" or "Computer Wins".  Select a card from your hand by making each card its own button. 
 
@@ -301,12 +332,13 @@ Now you get to make some decisions, like how does the computer play?  Will you t
 
  
 
-Phase 4: Create the UML diagram
+## Phase 4: Create the UML diagram
+
 Use the tool, Gliffy, to build a UML diagram. It should reflect Phase 3 only. Use this link for GliffyLinks to an external site. .  Click on "sign up" in the top right and then use your Google CSUMB account to create an account.  You will then be able to sign in and export a .jpg file that you can use for submission.
 
  
 
-Submission
+### Submission
 No output need be included since it is GUI program. 
 Turn in 2 .txt files, code for phases 2 + 3.  
 UML diagram file.
