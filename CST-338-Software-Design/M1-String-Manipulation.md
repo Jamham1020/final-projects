@@ -1,4 +1,4 @@
-String Manipulator
+# String Manipulator
  
 
 Individual Assignment
@@ -10,10 +10,10 @@ We will be using several of the built-in methods from the String class this week
 
  
 
-The Program Spec
+## The Program Spec
  
 
-Part 1:
+### Part 1:
 
 Be sure to use the naming conventions mentioned in the book, which is camelCase for regular variables, while static final variables are in the form of ALL_CAPS. (If you are a seasoned programmer and prefer a different style, contact me privately about using it)
 
@@ -25,7 +25,7 @@ Next, print the full name in all upper case and then in all lower case.
 
  
 
-Part 2:
+### Part 2:
 
 Create 2 static final variables, one for the minimum number of hours you should spend on this class each week, and the other for the max. (These are 12-20 hours)  Use MIN_HOURS and MAX_HOURS.
 
