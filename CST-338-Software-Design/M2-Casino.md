@@ -147,47 +147,54 @@ After writing this class, test it using a simple main() which instantiates an ob
 
 ## Class Assig2    -- (Static main class methods)
 
-int getBet()
+**int getBet()**
+
   This prompts the user for input and returns the bet amount as a functional return.  It should validate the amount before 
   it returns and insist on a legal bet (0 < bet < 100) until it gets one from the user.  It must return the legal value to 
   the client and not take any other action besides getting the legal amount.
 
-ThreeString pull()
+**ThreeString pull()**
+
 This method instantiates and returns a ThreeString object to the client.   The data of the ThreeString object has to first be filled with three randomly chosen strings according to the probabilities described in the "Understand the Application" section above. For example, it might return a ThreeString object that contains the three strings ["cherries",  "BAR" , "space"]. 
 
 The way it determines and loads the three strings is by using a private helper method, described, next, randString().  So this method, pull() will call the next method randString() three times to get the three strings that will be stored into the ThreeString object.  Once that's done, pull() just returns the ThreeString object to the client and its job is done.
 
-String randString()
+**String randString()**
+
 This private helper method does some work -- yet is still quite short.  It produces and returns a single random string based on the required probabilities.  It does this by calling the java Math.random() function and using the return result of that function as a means of deciding which of the four possible strings to return.  Take this in stages.  Math.random() returns a double between 0 and 1.  One idea (but not the only one) is to turn that double into an int  between 1 and 1000.  Then, decide which of those numbers should trigger a "7", which should trigger a "cherries", etc. based on the desired probabilities.   So you see, this is a very simple -- and even short -- function, even though it has to be designed carefully.  Common sense will go a long way here.
 
-int getPayMultiplier (ThreeString thePull)
+**int getPayMultiplier (ThreeString thePull)**
+
 After main() gets a ThreeString object from pull(), which we will call pullString, it needs to know what the payout will be.  That's the job of this function.  getPayMultiplier() takes the pullString as a parameter, and inspects it to determine what its pay multiplier should be:  5?  15?  100?  0?   It does this by looking at the three strings inside the passed-in ThreeString object and using if statements to determine and return the right value.  For example, if all three of the strings are "cherries", which is easily checked using an if statement, then this method returns a pay multiplier of 30.  You can use logic like this to create a sequence of if or else if statements that will give you the desired multiplier.   However you do it, the method will return one of the values;  0, 5, 15, 40, 60 or 100.
 
-void display (ThreeString thePull, int winnings )
+**void display (ThreeString thePull, int winnings )**
+
 This method takes the winnings (a dollar amount) and thePull as parameters and displays the three strings inside thePull along with "  sorry - you lost " or "congrats, you won $X".
 
-main()'s Workflow
+**main()'s Workflow**
+
 You can debug each of the above methods individually using a test main() that consists of a statement or two.  That way you will make sure each component works before trying to write the final main() client. 
 
 main() will have a loop that is controlled by a value returned from getBet().  As long as that value is non-zero, we keep playing.
 
 Each time through the loop, we have to call pull() to get the pullString as a return value. Then we need to pass that to getPayMultiplier() to find the multiplier.  We then compute the winnings based on the previous information, and finally we display it all using display().  When the winnings are sent to saveWinnings() and it returns false because it is full, then get out of the loop. That's all that each loop pass does.  So main() is quite neat and clean.  When the user wants to quit, or saveWinnings() returns false, then call toStringWinnings() and print the returned string. 
 
-Input Errors
+**Input Errors**
 
 The only place the user can make an input error is in getBet(), so that's the method that deals with such errors.  Don't worry about non-numbers.  Assume that a number was entered.  But do test for range and only return to main after you have a valid range. getBet() may not decide about ending the program.  That's up to main().
 
-Test Run Requirements:
+**Test Run Requirements:**
 
 Submit one run that lasts about 20 to 40 pulls -- enough to see a few wins.  At least once enter an illegal amount to make sure that your program handles it correctly.
 
-General Requirements
+**General Requirements**
 
 Communicate all values as parameters or return values, not through globals (static class variables). The only exception: it is fine to make a global Scanner object for the entire class and then close it when the program ends.  The meaning of these terms and examples are contained in the reading. 
 
 Also, I will emphasize that in keeping with the separation of I/O and computation, there will only be 3 methods that do any input or output to the screen. First,  getBet() is the only method that does input.  The main() will call display(), which sends output results to the screen, and toStringWinnings() which will output from the main at the end of the program.  The other methods do no input, no output and do not call any methods that do input or output.  
 
 Here is an example of a partial run sample:
+```
 
 /* -------------------- Sample Run ---------------------------* 
 How much would you like to bet (1 - 100) or 0 to quit? 5
@@ -274,3 +281,4 @@ Your individual winnings were:
 25 0 0 25 25 150 0 25 0 0 0 0 0 75 0
 Your total winnings were: $325
 -------------------------------------------------------- */
+```
