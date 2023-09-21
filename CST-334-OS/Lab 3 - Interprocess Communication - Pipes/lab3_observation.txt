@@ -1,0 +1,26 @@
+/* Name: Janet Pham
+   Date: 2022-07-12
+   Title: Lab 3 Documentation
+   Description: This is the documentation for lab 3 that covers pipes. Within this file are observations
+                that can be seen in this lab.
+*/
+
+ --- Step 1 ---
+ The output in step 1 shows what files are within the lab3 directory and this seems similar to the command -ls.
+ 
+ --- Step 2 ---
+ The output in step 2 was weird for me because when I first did it on my VM it shows:
+		Writer on the upstream end of the pipe -> 1 arguments
+		
+		Reader on the downstream end of the pipe
+		///////
+ but when I did it on the school server it flipped it and gave me:
+		Reader on the downstream end of the pipe
+		Writer on the upstream end of the pipe -> 1 arguments
+		. / s t e p 2
+		
+ From what I was told there wasn't a definitive answer to why this happens, although there are some theories but they are unimportant in a grand scheme of things.
+ 
+ --- Step 3 ---
+ The output in step 3 shows this ' root:x:0:0:root:/root:/bin/bash
+								   operator:x:11:0:operator:/root:/sbin/nologin '
