@@ -2,7 +2,7 @@
 
 This is a team assignment
 
-Understand the Class and Problem
+## Understand the Class and Problem
 
 We endeavor to set up some classes that can be used in future programs that involve playing card games with a human, or simulating card games entirely by a computer.  There are three  basic classes we'll need this week:
 
@@ -13,22 +13,22 @@ We endeavor to set up some classes that can be used in future programs that invo
          the same deck).  Recall this picture, which relates the Deck to the various Hands that it creates through the 
          process called "dealing".
 
-Here  are eight cards, each of which contains both a value ('A', '2', '3', ... 'T', 'J', 'Q',' K') and a suit (spades ♠, hearts ♥, diamonds ♦, clubs ♣)
+Here  are eight cards, each of which contains both a **value** ('A', '2', '3', ... 'T', 'J', 'Q',' K') and a **suit** (spades ♠, hearts ♥, diamonds ♦, clubs ♣)
 
 ![pic_of_cards](https://github.com/Jamham1020/final-projects/assets/64275401/99661ebb-7698-4555-a61f-3c9035a89f66)
 
 
-Notice that I am using the char 'T' to describe the value 10.  (Ignore the Joker, which we will not need.) 
+Notice that I am using the char **'T'** to describe the value **10**.  (Ignore the Joker, which we will not need.) 
 
-The dealer uses a Deck object to deal Hand objects to the players.  The dealer may or may not be a player who gets a hand of his own (poker dealers in casinos don't receive a hand, but most other games involve the dealer getting a hand).!
+The dealer uses a **Deck** object to deal **Hand** objects to the players.  The dealer may or may not be a player who gets a hand of his own (poker dealers in casinos don't receive a hand, but most other games involve the dealer getting a hand).
 
-[pic_of_dealing_cards](https://github.com/Jamham1020/final-projects/assets/64275401/a2231380-af80-478f-ad23-64dad7f30faa)
+![pic_of_dealing_cards](https://github.com/Jamham1020/final-projects/assets/64275401/a2231380-af80-478f-ad23-64dad7f30faa)
 
-** #0969DA Card**: The Card class has two obvious members:  value (a char)  and suit (an enum).  But we add a new boolean, cardError, which can inform a client that a card is in an illegal state. We'll want the usual constructors, mutators, accessors and toString() methods for the class.  We only allow standard cards, like ('A', clubs), ('9', hearts) and ('T', diamonds), no jokers or other special cards.
+**Card:** The **Card** class has two obvious members:  **value (a char)**  and **suit (an enum)**.  But we add a new boolean, **cardError**, which can inform a client that a card is in an illegal state. We'll want the usual constructors, mutators, accessors and **toString()** methods for the class.  We only allow standard cards, like **('A', clubs)**, **('9', hearts)** and **('T', diamonds)**, **no jokers** or other special cards.
 
-Hand:  As you can see, a Hand object usually contains several cards, so we'll need an array of Card objects (myArray) as the principal member of the Hand class.  Since each game deals a different number of cards into its players hands, and even within a game the number of cards in a hand will increase or decrease, we must keep track of this with an int value (numCards).  We'll need constructors, mutators, etc., of course.  We'll also want a way for the hand to receive a card (from the deck or somewhere else), and play a card (to the table or to another player).  These two methods will be called takeCard() and playCard(), respectively.  Since this class has no information about the game being played, it always puts new cards received by takeCard() into the next available location of the array (index position numCards) and plays a card via playCard() from the highest occupied location (index position numCards - 1).  The client game application would somehow prepare this highest position with the correct card to be played before calling Hand's playCard() method.  This detail is not our concern.
+**Hand:**  As you can see, a **Hand** object usually contains several cards, so we'll need an **array of Card** objects (**myArray**) as the principal member of the **Hand** class.  Since each game deals a different number of cards into its players hands, and even within a game the number of cards in a hand will increase or decrease, we must keep track of this with an **int** value (**numCards**).  We'll need constructors, mutators, etc., of course.  We'll also want a way for the hand to receive a card (from the deck or somewhere else), and play a card (to the table or to another player).  These two methods will be called takeCard() and playCard(), respectively.  Since this class has no information about the game being played, it always puts new cards received by takeCard() into the next available location of the array (index position numCards) and plays a card via playCard() from the highest occupied location (index position numCards - 1).  The client game application would somehow prepare this highest position with the correct card to be played before calling Hand's playCard() method.  This detail is not our concern.
 
-Deck: A Deck object is the source of all cards.  It's where the dealer gets cards to deal, and if a player takes an individual card after the deal, he takes it from the Deck object.  Naturally, the primary member here is an array of Card objects, much like Hand.  We'll call this member cards[].  A deck normally consists of a single pack of cards: 52 cards (four suits of 13 values each).  However, some games use two, three or more packs.  If a card game requires two packs, then the deck will consist of two full 52-card packs:  104 cards.  (Many games throw away some cards before beginning.  For example Pinochle wants all cards with values 8-and-below to be taken out of the deck, but we will not trouble ourselves with this complexity.)  A newly instantiated deck will have a multiple of 52 cards and will contain all the standard cards, so the number of cards in a newly instantiated deck will be 52, 104, 156, ...,  i.e., numPacks × 52.
+**Deck:** A Deck object is the source of all cards.  It's where the dealer gets cards to deal, and if a player takes an individual card after the deal, he takes it from the Deck object.  Naturally, the primary member here is an array of Card objects, much like Hand.  We'll call this member cards[].  A deck normally consists of a single pack of cards: 52 cards (four suits of 13 values each).  However, some games use two, three or more packs.  If a card game requires two packs, then the deck will consist of two full 52-card packs:  104 cards.  (Many games throw away some cards before beginning.  For example Pinochle wants all cards with values 8-and-below to be taken out of the deck, but we will not trouble ourselves with this complexity.)  A newly instantiated deck will have a multiple of 52 cards and will contain all the standard cards, so the number of cards in a newly instantiated deck will be 52, 104, 156, ...,  i.e., numPacks × 52.
 
 Clearly, we need an int like Hand's numCards, to keep track of how many cards are actually in the cards[] array.  To this end, we'll use topCard (not numCards), since a deck typically removes and delivers cards to players from the top-of-the-deck, and this is a convenient variable to use for the number of cards as well as the position of the top of the deck. 
 
@@ -40,16 +40,17 @@ There are a few other useful members (numPacks, for example).  In addition to th
 
  
 
-Phase 1: The Card Class
+### Phase 1: The Card Class
 A Public enum Type 
 Define the Suit enum, { clubs, diamonds, hearts, spades }, inside the Card class. 
 
 Private Member Data
 Include three members:
-
+  ```
    char value;
    Suit suit;
    boolean cardError;
+  ```
 Public Methods
 Card(char value, Suit suit) - The constructor should call the proper mutator(s).  Overload this to cope with a client that wants to instantiate without parameters and use 'A' and 'spades' as the default value and suit when not supplied.  Provide at least two constructors -- no parameters and all parameters -- or more if you wish.  Because we have the cardError member, the constructor (via the mutator), can set that member when it gets bad data; it does not have to assign default values upon receipt of bad data.  This is a new technique for us.  Again, default card (no parameters passed) is the ('A', spades).
 Card(Card origCard) - a copy constructor that will create a duplicate of the original, which is not a reference.
