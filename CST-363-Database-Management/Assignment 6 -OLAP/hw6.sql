@@ -1,5 +1,5 @@
 -- hw6.sql
---   Janet Pham 
+
 -- 1  Mapping of production to warehouse tables and columns
 --
 --  The product.description and PRODUCT.Description from HSD data is the product.ProductType and PRODUCT.ProductName in HSDDW, respectively. 
