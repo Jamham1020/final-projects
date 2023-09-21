@@ -1,5 +1,5 @@
 # Decks of Cards
-This is a team assignment
+ This is a team assignment
 Understand the Class and Problem
 We endeavor to set up some classes that can be used in future programs that involve playing card games with a human, or simulating card games entirely by a computer.  There are three  basic classes we'll need this week:
 
