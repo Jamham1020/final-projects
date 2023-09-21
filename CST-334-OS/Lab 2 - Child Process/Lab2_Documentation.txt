@@ -1,0 +1,10 @@
+### Step 3 Question: Run the program by typing ./ExecutableName and take a note of your observation. 
+\\  Upon running, the executable file received an error in the console that reads '''Segementation fault (core dumped)'''. 
+\\  This could be due to the fact that the process is trying to illegally access the memory.
+
+### Step 4 Questions: 
+### 1. Enter the delay of 500, what happens? 
+\\     After running the same commands, but this time with 500 I noticed that it ran a bit faster than when I ran it at 3000.
+
+### 2. Enter the delay of 5000, what happens?
+\\     After entering the delay of 5000, I noticed that it runs slower than 3000 and much slower than 500.
