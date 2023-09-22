@@ -12,8 +12,11 @@ You will write the program in Python where the interface to the TCP/IP applicati
 
 The Transmission Control Protocol(TCP) allows for connection-oriented sessions between clients and a server. This means that multiple clients can connect to a single server and the communication is managed in separate sessions for each client. The initial connection setup is done once and then packets are exchanged until the connection is closed. A common pattern is for a TCP server to start up and allow multiple connections; in fact, this is exactly how HTTP web servers work. 
 There are an endless number of applications that rely on the kind of communication service that you will develop in this assignment, here are a few examples: 
+
  ●	HTTP web server 
+ 
  ●	A chat service, such as Google Hangouts or Slack 
+ 
  ●	Data delivery service, such as the GPS position data in the http://odss.mbari.org backend 
 
 Many successful businesses have been built by building rich applications on top of a TCP/IP service such as the one you will create in this assignment. 
