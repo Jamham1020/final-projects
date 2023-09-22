@@ -93,15 +93,25 @@ Specifically, your client program should:
 2.	(5 points) Clients must initiate the connection by sending their connection requests to the server one client at a time.
 
 Specifically, your server program should: 
+
 3.	(5  points) The server must accept connections from both clients first BEFORE receiving the messages from either client. 
+
 4.	(5 points) Server establishes the first client that made a connection as Client X and the second one as client Y.
+
 5.	(5 points) After establishing a connection with both Clients, Server sends a message to both clients stating that a connection has been established. The message from the server must indicate which client is X and which client is Y. (Message to clients must look like: “Client X connected” or “Client Y connected”.)
+
 6.	(5 points) Next, the server receives messages from both clients (in any order) and establishes which message it received first.
+
 7.	(10 points) Server sends acknowledgements to both clients stating which message was received first. (Message to clients must look like: “Y: First_message received before X: Second_message” or “X: First_message received before Y: Second_message”.)
+
 8.	(10 points) The response string from Server to Clients (“X: First_message received before Y: Second_message”, or “Y: First_message received before X: Second_message”) must be in the order the messages from Client X or Client Y are received at the server and NOT the order in which the clients X and Y connected to the server.  Note: You will need multithreading and a way to share data between threads to achieve this.
+
 9.	(10 points) Your program should print out the messages received by the client and server at the receiving end. 
+
 10.	(10 points) Execute your programs on your mininet virtual machine. 
+
 11.	(20 points) Explain why you need multithreading to solve this problem. Put this in a comment at the top of your server code. 
+
 12.	(10 points) Program must be readable and well documented. All files must be in order as indicated in the “What to turn in” section.
 
 
