@@ -9,4 +9,9 @@ All done on repl.it
    - JavaScript
    - Java
 
-## HW 2: 
+## HW 2: Hangman Game 
+   Different Categories like fruits, animals, subjects, sports, creatures
+
+## HW 3:
+
+## HW 4: 
