@@ -42,7 +42,15 @@ Artwork specifications:
 - Develop an interactive prototype using Adobe XD and Illustrator/Photoshop as needed to mimic the navigational flow and animations to the app/website.
 - Construct digital files with proper specifications to fulfill the task requirements.
 - Create aesthetically pleasing visual and interactive designs that clearly communicate the design purposes and functionalities.
-- Establish professional habits for managing, organizing, and formatting digital graphic files. 
+- Establish professional habits for managing, organizing, and formatting digital graphic files.
+
+
+<p align="center">
+  <img src="https://github.com/Jamham1020/final-projects/assets/64275401/d4066ff0-abff-49d3-a722-e613180bcf28">
+  <img src=
+</p>
+
+  
 
 # Final Project Design Iterations, Interactive Prototyping, and Presentation (Final Project.zip) (Week 7-8)
 
@@ -73,6 +81,11 @@ Watch the videos of this module and apply the knowledge and software skills you 
 - Critique and provide feedback to others using the appropriate terminologies and rationale.
   
 <p align="center">
+   <img src="https://github.com/Jamham1020/final-projects/assets/64275401/52c97642-86da-413f-92a1-e622a861e389">
+
    <img src="https://github.com/Jamham1020/final-projects/assets/64275401/0acd2f51-bb28-49d7-a07e-d0ac99519a4f">
+
+   <img src="https://github.com/Jamham1020/final-projects/assets/64275401/970b47cd-c629-4ff6-97f7-b9012978fa56">
+
 </p>
   
