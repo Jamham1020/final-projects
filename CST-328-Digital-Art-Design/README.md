@@ -73,6 +73,6 @@ Watch the videos of this module and apply the knowledge and software skills you 
 - Critique and provide feedback to others using the appropriate terminologies and rationale.
   
 <p align="center">
-  ![image](https://github.com/Jamham1020/final-projects/assets/64275401/0acd2f51-bb28-49d7-a07e-d0ac99519a4f)
+   <img src="https://github.com/Jamham1020/final-projects/assets/64275401/0acd2f51-bb28-49d7-a07e-d0ac99519a4f">
 </p>
   
