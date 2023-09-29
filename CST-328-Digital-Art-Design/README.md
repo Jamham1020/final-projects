@@ -9,7 +9,7 @@ Re-make the menu in a brand new style, including your own design choices and dec
 
 Clarify WHY you made the changes you did.
 
-![image](https://github.com/Jamham1020/final-projects/assets/64275401/cce145ea-160e-4708-b69d-a55373abcb07) ![image](https://github.com/Jamham1020/final-projects/assets/64275401/92b33eaa-f3d0-454d-9df1-b6c14d5d6a15)
+ ![image](https://github.com/Jamham1020/final-projects/assets/64275401/92b33eaa-f3d0-454d-9df1-b6c14d5d6a15)
 
 
 
