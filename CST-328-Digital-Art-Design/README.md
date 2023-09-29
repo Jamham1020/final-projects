@@ -1,4 +1,4 @@
-# Design a Game Menu
+# Design a Game Menu (Week 2)
 Design a game menu. Due before the next Module opens. Start by:
 
 Locate an EXISTING game menu still. It can be from any game.
@@ -11,7 +11,7 @@ Clarify WHY you made the changes you did.
 
 Complete the forum critique with your new menu after turning this in.
 
-# Interactive User Interface Prototype - japham-4.zip
+# Interactive User Interface Prototype - japham-4.zip (Week 4)
 
 ## Creating Interactive User Interface Prototype
 
@@ -38,7 +38,7 @@ Artwork specifications:
 - Create aesthetically pleasing visual and interactive designs that clearly communicate the design purposes and functionalities.
 - Establish professional habits for managing, organizing, and formatting digital graphic files. 
 
-# Final Project Design Iterations, Interactive Prototyping, and Presentation (Final Project.zip)
+# Final Project Design Iterations, Interactive Prototyping, and Presentation (Final Project.zip) (Week 7-8)
 
 ## Presentation and Design Process Documentation
 
