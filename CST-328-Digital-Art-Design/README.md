@@ -46,8 +46,12 @@ Artwork specifications:
 
 
 <p align="center">
-  <img src="https://github.com/Jamham1020/final-projects/assets/64275401/d4066ff0-abff-49d3-a722-e613180bcf28">
-  <img src=
+  <img src="https://github.com/Jamham1020/final-projects/assets/64275401/52c97642-86da-413f-92a1-e622a861e389" width="250" height="250">
+  
+  <img src="https://github.com/Jamham1020/final-projects/assets/64275401/d4066ff0-abff-49d3-a722-e613180bcf28" width="250" height="250">
+  
+  <img src="https://github.com/Jamham1020/final-projects/assets/64275401/970b47cd-c629-4ff6-97f7-b9012978fa56" width="250" height="250">
+
 </p>
 
   
@@ -81,11 +85,6 @@ Watch the videos of this module and apply the knowledge and software skills you 
 - Critique and provide feedback to others using the appropriate terminologies and rationale.
   
 <p align="center">
-   <img src="https://github.com/Jamham1020/final-projects/assets/64275401/52c97642-86da-413f-92a1-e622a861e389">
-
    <img src="https://github.com/Jamham1020/final-projects/assets/64275401/0acd2f51-bb28-49d7-a07e-d0ac99519a4f">
-
-   <img src="https://github.com/Jamham1020/final-projects/assets/64275401/970b47cd-c629-4ff6-97f7-b9012978fa56">
-
 </p>
   
