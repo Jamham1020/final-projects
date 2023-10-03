@@ -17,5 +17,5 @@ At the end of this class, you'll be able to execute a data science project from 
 ## Textbook: 
 [*Python Data Science Handbook 2017*](https://github.com/Jamham1020/final-projects/blob/main/CST-383-Data-Science/Python%20Data%20Science%20Handbook.pdf) 
 
-*Hands-on Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd ed (2019)*
+[*Hands-on Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd ed (2019)*](https://github.com/wdp-007/Deep-learning-books/blob/master/1.%20Machine%20Leaning%20and%20Deep%20Learning/Hands%20on%20Machine%20Learning%20with%20Scikit%20Learn%20Keras%20and%20TensorFlow%202nd%20Edition-2019.pdf)
 
