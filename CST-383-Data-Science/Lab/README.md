@@ -1,7 +1,7 @@
 # Labs
 
 ## Week 1 - NumPy and Pandas
-- NumPy Activity 1
+- [NumPy Activity 1](https://github.com/Jamham1020/final-projects/blob/main/CST-383-Data-Science/Lab/NumPy%20Activity%201.ipynb)
 - NumPy Activity 2
 - Panda Series
 - Panda Dataframe
