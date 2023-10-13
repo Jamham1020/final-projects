@@ -86,31 +86,54 @@
 
     Ans: P → Q
 
-   5. Is the statement of problem 1 true if you don't give your friend 50 bucks but your friend eats a cheeseburger in 20 seconds anyway?
-      Ans: Yes. Please make sure you understand the semantics of the implication (used in the logical sentence of the previous problem). Refer to the truth table of implication if needed.
+   4. Is the statement of problem 1 true if you don't give your friend 50 bucks but your friend eats a cheeseburger in 20 seconds 
+      anyway?
+
+     Ans: Yes. Please make sure you understand the semantics of the implication (used in the logical 
+     sentence of the previous 
+     problem). Refer to the truth table of implication if needed.
    
-   6. For each of the following English sentences, write a translation key and then write the sentence in logic. Ensure that your number of atomic sentences matches you number of symbols in your translation key:
+   5. For each of the following English sentences, write a translation key and then write the sentence in 
+      logic. Ensure that your number of atomic sentences matches you number of symbols in your translation 
+      key:
+
       a. Josie is a cat 
-        Translation key: P: Josie is a cat.  The logical sentence is P.
+
+          Translation key: P: Josie is a cat.  The logical sentence is P.
+
       b. If Bez studies, Bez will pass the exam
-        Translation key: P: Bez studies, Q: Bez will pass the exam. The logical sentence is P → Q
+
+          Translation key: P: Bez studies, Q: Bez will pass the exam. The logical sentence is P → Q
+
       c. Josie is a cat only if Josie is a mammal
-        Translation key: P: Josie is a cat, Q: Josie is a mammal.  The logical sentence is P → Q
-        "only if" is tricky.  Think of it this way: the sentence says that the only way Josie can be a cat is if Josie is a mammal.  This means that if Josie is a cat, we know Josie is a mammal.  
-        It might also help to remember that "Josie is a cat if Josie is a mammal" translates to Q P.  So the arrow symbol is pointing in different directions for "if" and "only if".
+
+          Translation key: P: Josie is a cat, Q: Josie is a mammal.  The logical sentence is P → Q
+          "only if" is tricky.  Think of it this way: the sentence says that the only way Josie can be a cat 
+          is if Josie is a mammal.  This means that if Josie is a cat, we know Josie is a mammal.  
+          It might also help to remember that "Josie is a cat if Josie is a mammal" translates to Q P.  So 
+          the arrow symbol is pointing in different directions for "if" and "only if".
 
 # Implication truth table; negation
 
-    1. If P is false and Q is false, then what is the value of the logical sentence P → Q?
-       Ans: According to the truth table for implication, the value is true. We assume the statement to be true until shown to be untrue. In this instance, P is not true, so Q can do anything without disagreeing with the statement.
+1. If P is false and Q is false, then what is the value of the logical sentence P → Q?
+
+       Ans: According to the truth table for implication, the value is true. We assume the statement to be 
+       true until shown to be untrue. In this instance, P is not true, so Q can do anything without 
+       disagreeing with the statement.
     
-    2. If P is true, Q is false, and R is true, then what is the value of the logical sentence P → (Q → R)?
-       Ans: Start with Q R.  If Q is false and R is true, then this formula is true (again, Q is not “activating” the conditional, and so R can do whatever).  P is true, so using the truth table for implication, the value of the full sentence is true.
+2. If P is true, Q is false, and R is true, then what is the value of the logical sentence P → (Q → R)?
+
+       Ans: Start with Q R.  If Q is false and R is true, then this formula is true (again, Q is not 
+       “activating” the conditional, and so R can do whatever).  P is true, so using the truth table for 
+       implication, the value of the full sentence is true.
     
-    3. If P is false and Q is true, then what is the value of the logical sentence ¬(P → ¬Q)?
-       Ans: Since Q is true, Q is false, and then since P is false, P Q is true.  This means the full sentence is false.
-    
-    4. Translate the following phrase into our logical language:
+3. If P is false and Q is true, then what is the value of the logical sentence ¬(P → ¬Q)?
+
+       Ans: Since Q is true, Q is false, and then since P is false, P Q is true.  This means the full 
+       sentence is false.
+
+4. Translate the following phrase into our logical language:
+
        P provided that Q
        Ans: "P provided that Q" means the same thing as "if Q then P", and translates to "Q → P".
 
