@@ -155,4 +155,8 @@
         Q
        Use a truth table to check the validity of the argument.
        Truth table: (not a valid argument because of line 1)
-       
+       |   P  | Q   | premise
+       |-----:|-----|-----------|
+       |  F   |     |          |
+       |  F   |     |          |
+       |  T   |     |          |
