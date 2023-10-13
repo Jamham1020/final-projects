@@ -7,14 +7,16 @@
     c. Chocolate is delicious.
     d. Please get me some chocolate.
 
-  3. Which of the following sentences are declarative?
+  2. Which of the following sentences are declarative?
+
     a. The best things in life are free.
     b. He who laughs last, laughs best.
       [Note: this sentence is declarative but it will be hard to capture in logic because its truth is ambiguous.]
     c. Get on your horse.
     d. Coke or Pepsi?
 
-  4. Which of the following sentences are atomic?
+  3. Which of the following sentences are atomic?
+
     a. My aunt lives in Canada and does not own a car.
     b. I am not a Pokémon.
 		  [Note: negation is considered a connective]
@@ -33,7 +35,8 @@
       Ans: It's about syntax.  It's about the legal order of words in a sentence, not about what the sentence means.  To say it another way, it's about legal sentence structure.
 
   8. Yoda says things like "Power you have become".  What is strange about Yoda's statement, the syntax or the semantics?
-     Ans: I think the meaning of the sentence is clear: "you have become powerful".  What is strange is the ordering of the words in the sentence, which is syntax.
+     Ans: I think the meaning of the sentence is clear: "you have become powerful".  What is strange is the ordering of the words in 
+     the sentence, which is syntax.
 
 # Metalanguage
 
