@@ -2,7 +2,7 @@
 
   1. Which of the following sentences are declarative?
 
-    a. I like chocolate.
+    _a. I like chocolate._
     b. Chocolate contains cocoa solids.
     c. Chocolate is delicious.
     d. Please get me some chocolate.
@@ -11,7 +11,8 @@
 
     a. The best things in life are free.
     b. He who laughs last, laughs best.
-      [Note: this sentence is declarative but it will be hard to capture in logic because its truth is ambiguous.]
+      [Note: this sentence is declarative but it will be hard to capture in logic 
+      because its truth is ambiguous.]
     c. Get on your horse.
     d. Coke or Pepsi?
 
@@ -24,7 +25,8 @@
     d. Is the following statement about syntax or semantics?
 
   5. When I write "51" I mean the number 51.
-     Ans: It's about semantics.  It is explaining the meaning of some symbols. 
+     
+    Ans: It's about semantics.  It is explaining the meaning of some symbols. 
   
   6. Is the following statement about syntax or semantics?
      When writing positive integers, you should write them like "0", "5", "126".  The first digit should not be 0 unless you're writing zero.  In other words, don't write "05" or "00" or "0126".
