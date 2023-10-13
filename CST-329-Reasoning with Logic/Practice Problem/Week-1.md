@@ -2,15 +2,15 @@
 
   1. Which of the following sentences are declarative?
 
-    _a. I like chocolate._
-    b. Chocolate contains cocoa solids.
-    c. Chocolate is delicious.
+    *a. I like chocolate.
+    *b. Chocolate contains cocoa solids.
+    *c. Chocolate is delicious.
     d. Please get me some chocolate.
 
   2. Which of the following sentences are declarative?
 
-    a. The best things in life are free.
-    b. He who laughs last, laughs best.
+    *a. The best things in life are free.
+    *b. He who laughs last, laughs best.
       [Note: this sentence is declarative but it will be hard to capture in logic 
       because its truth is ambiguous.]
     c. Get on your horse.
@@ -21,57 +21,75 @@
     a. My aunt lives in Canada and does not own a car.
     b. I am not a Pokémon.
 		  [Note: negation is considered a connective]
-    c. I want to own a donut shop.
+    *c. I want to own a donut shop.
     d. Is the following statement about syntax or semantics?
 
-  5. When I write "51" I mean the number 51.
+  4. When I write "51" I mean the number 51.
      
     Ans: It's about semantics.  It is explaining the meaning of some symbols. 
   
+  5. Is the following statement about syntax or semantics?
+    When writing positive integers, you should write them like "0", "5", "126".  The 
+    first digit should not be 0 unless you're writing zero.  In other words, don't 
+    write "05" or "00" or "0126".
+    
+    Ans: It's about syntax.  It's explaining the legal form for the decimal 
+    representation of positive integers.
+
   6. Is the following statement about syntax or semantics?
-     When writing positive integers, you should write them like "0", "5", "126".  The first digit should not be 0 unless you're writing zero.  In other words, don't write "05" or "00" or "0126".
-     Ans: It's about syntax.  It's explaining the legal form for the decimal representation of positive integers.
-
-  7. Is the following statement about syntax or semantics?
      "Do not end a sentence with a preposition".
-      Ans: It's about syntax.  It's about the legal order of words in a sentence, not about what the sentence means.  To say it another way, it's about legal sentence structure.
 
-  8. Yoda says things like "Power you have become".  What is strange about Yoda's statement, the syntax or the semantics?
-     Ans: I think the meaning of the sentence is clear: "you have become powerful".  What is strange is the ordering of the words in 
-     the sentence, which is syntax.
+    Ans: It's about syntax.  It's about the legal order of words in a sentence, not 
+    about what the sentence means.  To say it another way, it's about legal sentence 
+    structure.
+
+  7. Yoda says things like "Power you have become".  What is strange about Yoda's statement, the syntax or the semantics?
+
+    Ans: I think the meaning of the sentence is clear: "you have become powerful".  
+    What is strange is the ordering of the words in the sentence, which is syntax.
 
 # Metalanguage
 
   1. Can a sentence in our logical language contain symbols like P or Q? What do they mean?
-     Ans: Yes, we will use letters like P in the logic we use to mean atomic sentences.
+
+    Ans: Yes, we will use letters like P in the logic we use to mean atomic sentences.
 
   2. Is a truth table about syntax or semantics?
-     Ans: It's about semantics.  It explains the meaning of logical sentences.
 
-  3. The text below contains more than one atomic sentence.  Identify the atomic sentences and create a translation key.
-     Not everyone has a vote.  A convicted felon does not have a vote.  A child does not have a vote.
-      Ans: Here's my translation key:
-      P: Everyone has a vote
-      Q: A convicted felon has a vote
-      R: A child has a vote
-      Notice that after we use P and Q then we start using capital letters that follow Q.
+    Ans: It's about semantics.  It explains the meaning of logical sentences.
+
+  3. The text below contains more than one atomic sentence.  Identify the atomic 
+     sentences and create a translation key.
+     Not everyone has a vote.  A convicted felon does not have a vote.  A child does 
+     not have a vote.
+
+    Ans: Here's my translation key:
+    P: Everyone has a vote
+    Q: A convicted felon has a vote
+    R: A child has a vote
+     Notice that after we use P and Q then we start using capital letters that 
+    follow Q.
 
 # Implication
 
-   1. Your friend says "If you give me 50 bucks I'll eat a cheeseburger in 20 seconds or less".   How many atomic sentences in the statement?
-   Ans: I count two atomic sentences (see next problem for details).
+   1. Your friend says "If you give me 50 bucks I'll eat a cheeseburger in 20 seconds or less".   How many atomic sentences in the 
+      statement?
+   
+    Ans: I count two atomic sentences (see next problem for details).
 
    2. Write a translation key for the previous problem.
-      P  You give me 50 bucks
-      Q  I will eat a cheeseburger in 20 seconds or less
+
+     P  You give me 50 bucks
+     Q  I will eat a cheeseburger in 20 seconds or less
 
    3. Write the English statement of problem 1 as a logical sentence, using your translation key of the previous problem.
-      Ans: P → Q
 
-   4. Is the statement of problem 1 true if you don't give your friend 50 bucks but your friend eats a cheeseburger in 20 seconds anyway?
+    Ans: P → Q
+
+   5. Is the statement of problem 1 true if you don't give your friend 50 bucks but your friend eats a cheeseburger in 20 seconds anyway?
       Ans: Yes. Please make sure you understand the semantics of the implication (used in the logical sentence of the previous problem). Refer to the truth table of implication if needed.
    
-   5. For each of the following English sentences, write a translation key and then write the sentence in logic. Ensure that your number of atomic sentences matches you number of symbols in your translation key:
+   6. For each of the following English sentences, write a translation key and then write the sentence in logic. Ensure that your number of atomic sentences matches you number of symbols in your translation key:
       a. Josie is a cat 
         Translation key: P: Josie is a cat.  The logical sentence is P.
       b. If Bez studies, Bez will pass the exam
