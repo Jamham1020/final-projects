@@ -1,37 +1,38 @@
 # Language of Logic
 
   1. Which of the following sentences are declarative?
+
     a. I like chocolate.
     b. Chocolate contains cocoa solids.
     c. Chocolate is delicious.
     d. Please get me some chocolate.
 
-  2. Which of the following sentences are declarative?
+  3. Which of the following sentences are declarative?
     a. The best things in life are free.
     b. He who laughs last, laughs best.
       [Note: this sentence is declarative but it will be hard to capture in logic because its truth is ambiguous.]
     c. Get on your horse.
     d. Coke or Pepsi?
 
-  3. Which of the following sentences are atomic?
+  4. Which of the following sentences are atomic?
     a. My aunt lives in Canada and does not own a car.
     b. I am not a Pokémon.
 		  [Note: negation is considered a connective]
     c. I want to own a donut shop.
     d. Is the following statement about syntax or semantics?
 
-  4. When I write "51" I mean the number 51.
+  5. When I write "51" I mean the number 51.
      Ans: It's about semantics.  It is explaining the meaning of some symbols. 
   
-  5. Is the following statement about syntax or semantics?
+  6. Is the following statement about syntax or semantics?
      When writing positive integers, you should write them like "0", "5", "126".  The first digit should not be 0 unless you're writing zero.  In other words, don't write "05" or "00" or "0126".
      Ans: It's about syntax.  It's explaining the legal form for the decimal representation of positive integers.
 
-  6. Is the following statement about syntax or semantics?
+  7. Is the following statement about syntax or semantics?
      "Do not end a sentence with a preposition".
       Ans: It's about syntax.  It's about the legal order of words in a sentence, not about what the sentence means.  To say it another way, it's about legal sentence structure.
 
-  7. Yoda says things like "Power you have become".  What is strange about Yoda's statement, the syntax or the semantics?
+  8. Yoda says things like "Power you have become".  What is strange about Yoda's statement, the syntax or the semantics?
      Ans: I think the meaning of the sentence is clear: "you have become powerful".  What is strange is the ordering of the words in the sentence, which is syntax.
 
 # Metalanguage
