@@ -72,8 +72,8 @@
 
 # Implication
 
-   1. Your friend says "If you give me 50 bucks I'll eat a cheeseburger in 20 seconds or less".   How many atomic sentences in the 
-      statement?
+   1. Your friend says "If you give me 50 bucks I'll eat a cheeseburger in 20 seconds or less". How many 
+      atomic sentences in the statement?
    
     Ans: I count two atomic sentences (see next problem for details).
 
@@ -107,10 +107,10 @@
 
       c. Josie is a cat only if Josie is a mammal
 
-          Translation key: P: Josie is a cat, Q: Josie is a mammal.  The logical sentence is P → Q
-          "only if" is tricky.  Think of it this way: the sentence says that the only way Josie can be a cat 
-          is if Josie is a mammal.  This means that if Josie is a cat, we know Josie is a mammal.  
-          It might also help to remember that "Josie is a cat if Josie is a mammal" translates to Q P.  So 
+          Translation key: P: Josie is a cat, Q: Josie is a mammal. The logical sentence is P → Q
+          "only if" is tricky.Think of it this way: the sentence says that the only way Josie can be a cat 
+          is if Josie is a mammal. This means that if Josie is a cat, we know Josie is a mammal. It might 
+          also help to remember that "Josie is a cat if Josie is a mammal" translates to Q → P. So 
           the arrow symbol is pointing in different directions for "if" and "only if".
 
 # Implication truth table; negation
@@ -123,22 +123,23 @@
     
 2. If P is true, Q is false, and R is true, then what is the value of the logical sentence P → (Q → R)?
 
-       Ans: Start with Q R.  If Q is false and R is true, then this formula is true (again, Q is not 
-       “activating” the conditional, and so R can do whatever).  P is true, so using the truth table for 
+       Ans: Start with Q → R. If Q is false and R is true, then this formula is true (again, Q is not 
+       “activating” the conditional, and so R can do whatever). P is true, so using the truth table for 
        implication, the value of the full sentence is true.
     
 3. If P is false and Q is true, then what is the value of the logical sentence ¬(P → ¬Q)?
 
-       Ans: Since Q is true, Q is false, and then since P is false, P Q is true.  This means the full 
+       Ans: Since Q is true, Q is false, and then since P is false, P → Q is true.This means the full 
        sentence is false.
 
 4. Translate the following phrase into our logical language:
+   P provided that Q
 
-       P provided that Q
        Ans: "P provided that Q" means the same thing as "if Q then P", and translates to "Q → P".
 
-    5. For the following English sentence, write a translation key and then write the sentence in logic:
-       If Jessica studies, then Jessica will pass the exam, provided she wakes up in time.
+5. For the following English sentence, write a translation key and then write the sentence in logic:
+   If Jessica studies, then Jessica will pass the exam, provided she wakes up in time.
+
        S  Jessica studies
        W  Jessica wakes up in time
        P  Jessica will pass the exam
@@ -146,37 +147,48 @@
        S → (W → P)
        NOTE: At least until we have the use of “AND” we’re kind of stuck writing things like this!
 
-     6. For the following English sentence, write a translation key and then write the sentence in logic:
-        If Tom does not pass the exam, then if Steve studies, Steve will pass the exam.
-        P  Tom passes the exam
-        Q  Steve studies
-        R  Steve will pass the exam
-        Using this key, I would write the formula like this:
-        ¬P → (Q → R)
+6. For the following English sentence, write a translation key and then write the sentence in logic:
+   If Tom does not pass the exam, then if Steve studies, Steve will pass the exam.
+
+       P  Tom passes the exam
+       Q  Steve studies
+       R  Steve will pass the exam
+       Using this key, I would write the formula like this:
+       ¬P → (Q → R)
 
 # Arguments
 
-     1. Is it possible for an argument to have no conclusion?
-        Ans: Every argument has a conclusion, and it is always a single sentence.
+1. Is it possible for an argument to have no conclusion?
 
-     2. Must all the premises of an argument be true?
-        No, the premises of an argument are not required to be true. In logic, the point is not to determine whether something is a fact, but whether the reasoning process is correct. As such, if both parties agree to the premises of the argument, then it is only logical that they agree to the conclusion.
+       Ans: Every argument has a conclusion, and it is always a single sentence.
 
-     3. If a sentence is not true, we also refer to it as: (select all that apply)
-        a. an invalid sentence
-        b. an undefined sentence 
-        c. a false sentence
-        Note: The word 'valid' applies to arguments, not sentences.  Also, we have never discussed any concept of an "undefined sentence".
+2. Must all the premises of an argument be true?
+   
+       No, the premises of an argument are not required to be true. In logic, the point is not to determine 
+       whether something is a fact, but whether the reasoning process is correct. As such, if both parties 
+       agree to the premises of the argument, then it is only logical that they agree to the conclusion.
 
-     4. (True/False)  In a valid argument, it could be that the premises are true but the conclusion is false.
-         Ans: False.  By definition, in a valid argument, if the premises are true then the conclusion is true.
+3. If a sentence is not true, we also refer to it as: (select all that apply)
 
-     5. Is the following argument valid?
-        I graduated from a California high school
-        If I graduated from a California high school then I can legally vote
-        ------------
-        I can legally vote
-        Ans: Under the assumption that the premises are true, the conclusion is definitely true.  Therefore, the argument is valid. It doesn’t matter that the real world has more requirements, the conclusion comes logically from the premises given.
+       a. an invalid sentence
+       b. an undefined sentence 
+       *c. a false sentence*
+       Note: The word 'valid' applies to arguments, not sentences.  Also, we have never discussed any 
+       concept of an "undefined sentence".
+
+4. (True/False)  In a valid argument, it could be that the premises are true but the conclusion is false.
+
+       Ans: False.  By definition, in a valid argument, if the premises are true then the conclusion is true.
+
+5. Is the following argument valid?
+   I graduated from a California high school
+   If I graduated from a California high school then I can legally vote
+   ------------
+   I can legally vote
+
+       Ans: Under the assumption that the premises are true, the conclusion is definitely true.  Therefore, 
+       the argument is valid. It doesn’t matter that the real world has more requirements, the conclusion 
+       comes logically from the premises given.
 
      6. (True/False)  Every valid argument is also a sound argument.
          Ans: False. Not every valid argument is sound.
