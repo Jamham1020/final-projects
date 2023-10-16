@@ -215,8 +215,11 @@
 4. Use a truth table to check the validity of the argument.
 
        Truth table: (not a valid argument because of line 1)
-       | P  | Q | premise ¬P | premise P → ¬Q | conclusion Q |
-       | -- | --| ---------- | -------------- | ------------ |
-       | F  | F  | T | T | F |
-       | F  | T  | T | T | T |
+
+       | P  |  Q  | premise ¬P | premise P → ¬Q | conclusion Q |
+       | -- | --  | ---------- | -------------- | ------------ |
+       | F  |  F  |     T      |        T       |       F      |
+       | F  |  T  |     T      |        T       |       T      |
+       | T  |  F  |     F      |        T       |       F      |
+       | T  |  T  |     F      |        F       |       T      |
        
