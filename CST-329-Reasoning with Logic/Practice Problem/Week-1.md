@@ -197,14 +197,16 @@
 # Checking the validity of arguments
 
 1. Read the following statements:
-   Our child doesn't read that trash.  If our child read that trash she wouldn't appreciate real literature.    Therefore, our child appreciates real literature.  
+
+   Our child doesn't read that trash.If our child read that trash she wouldn't appreciate real literature.      Therefore, our child appreciates real literature.
+     
    Produce a translation key for this sentence.
 
        Translation key:
         P	Our child reads that trash
         Q	Our child appreciates fine literature
 
-2. Translate the sentence to a logical argument.
+3. Translate the sentence to a logical argument.
 
        Argument:
         ¬P
@@ -222,4 +224,27 @@
        | F  |  T  |     T      |        T       |       T      |
        | T  |  F  |     F      |        T       |       F      |
        | T  |  T  |     F      |        F       |       T      |
-       
+   
+5. If you have time, check the validity of this argument using a truth table:
+
+P → Q
+Q → R
+¬R
+------
+¬P
+
+If the argument is not valid, explain the situations in which it is not valid.
+
+	Ans: The argument is valid. When all premises are true, the conclusion is true.
+
+       | P  |  Q  |      R     | premise  P → Q | premise Q → R | premise ¬R | conclusion ¬P |
+       | -- | --  | ---------- | -------------- | ------------- | ---------- | ------------- |
+       | F  |  F  |     F      |        T       |       T       |      T     |       T       |
+       | F  |  F  |     T      |        T       |       T       |      F     |       T       |
+       | F  |  T  |     F      |        T       |       F       |      T     |       T       |
+       | F  |  T  |     T      |        T       |       T       |      F     |       T       |
+       | T  |  F  |     F      |        F       |       T       |      T     |       F       |
+       | T  |  F  |     T      |        F       |       T       |      F     |       F       |
+       | T  |  T  |     F      |        T       |       F       |      T     |       F       |
+       | T  |  T  |     T      |        T       |       T       |      F     |       F       |
+
