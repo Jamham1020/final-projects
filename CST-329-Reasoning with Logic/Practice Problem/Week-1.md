@@ -190,28 +190,33 @@
        the argument is valid. It doesn’t matter that the real world has more requirements, the conclusion 
        comes logically from the premises given.
 
-     6. (True/False)  Every valid argument is also a sound argument.
-         Ans: False. Not every valid argument is sound.
+ 6. (True/False)  Every valid argument is also a sound argument.
+
+        Ans: False. Not every valid argument is sound.
 
 # Checking the validity of arguments
 
-     1. Read the following statements:
-        Our child doesn't read that trash.  If our child read that trash she wouldn't appreciate real literature.  Therefore, our child appreciates real literature.  
-        Produce a translation key for this sentence.
-        Translation key:
+1. Read the following statements:
+   Our child doesn't read that trash.  If our child read that trash she wouldn't appreciate real literature.    Therefore, our child appreciates real literature.  
+   Produce a translation key for this sentence.
+
+       Translation key:
         P	Our child reads that trash
         Q	Our child appreciates fine literature
 
-     2. Translate the sentence to a logical argument.
-        Argument:
+2. Translate the sentence to a logical argument.
+
+       Argument:
         ¬P
         P → ¬Q
         -------------
         Q
-       Use a truth table to check the validity of the argument.
+   
+4. Use a truth table to check the validity of the argument.
+
        Truth table: (not a valid argument because of line 1)
-       |   P  | Q   | premise
-       |-----:|-----|-----------|
-       |  F   |     |          |
-       |  F   |     |          |
-       |  T   |     |          |
+       | P  | Q | premise ¬P | premise P → ¬Q | conclusion Q |
+       | -- | --| ---------- | -------------- | ------------ |
+       | F  | F  | T | T | F |
+       | F  | T  | T | T | T |
+       
