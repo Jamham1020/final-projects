@@ -165,4 +165,10 @@ if P then Q
 
         P → (Q → R) 
         (P → (Q → R)) 
-        P → (Q → R) 
+        P → (Q → R)
+
+# Quiz 1 (CH 1,2,3)
+
+1. Which of the following declarative sentences are atomic?
+   
+
