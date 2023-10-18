@@ -138,12 +138,11 @@ Construct a proof for the argument: R, P, P → (R → Q) ∴ Q
 ## 4.2
 
 Construct a proof for the argument: ¬P → Q, P → R, ¬R ∴ Q
-
-1	¬P → Q		
-2	P → R		
-3	¬R		
-4	¬P	            2, 3 Modus Tollens (DS)
-5	Q	            1, 4 Modus Ponens	(->E)
+1.	¬P → Q		
+2.	P → R		
+3.	¬R		
+4.	¬P	            2, 3 Modus Tollens (DS)
+5.	Q	            1, 4 Modus Ponens	(->E)
 
 
 
