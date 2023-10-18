@@ -210,12 +210,12 @@
 
   *Ulysses can go home only if he isn't from Troy.*
 
-  Here is a translation key:
+    Here is a translation key:
 
-  P: Ulysses can go home
-  Q: Ulysses is from Troy
+    P: Ulysses can go home
+    Q: Ulysses is from Troy
 
-  Here is a translation to logic: P → ¬Q
+    Here is a translation to logic: P → ¬Q
 
 ## Conjunction Inference
 
@@ -227,11 +227,11 @@
 
    P
 
-  Proof:
+       Proof:
 
-  1. P ∧ Q
-  --------
-  2. P      1 Simplification (^E)
+       1. P ∧ Q
+       --------
+       2. P      1 Simplification (^E)
 
 2. Here is something a little harder.  Using the proof checker, prove the following argument is valid:
 
@@ -241,16 +241,58 @@
 
    Q ∧ P
 
-   Proof:
+       Proof:
 
-   1. P ∧ Q
+       1. P ∧ Q
+       ----------
+       2. Q       1 Simplification (^E)
+       3. P       1 Simplification (^E)
+       4. Q ∧ P   2,3 Adjunction (^I)
 
-   ----------
+3. Check the meaning of the following formula by writing a truth table, as we did in the lecture:P → ¬(Q ∧ R)
 
-   2. Q       1 Simplification (^E)
-   3. P       1 Simplification (^E)
-   4. Q ∧ P   2,3 Adjunction (^I)
+   ANS:
    
+     | P  |  Q  |    R       |     (Q ∧ R)    |   ¬(Q ∧ R)   |  P → ¬(Q ∧ R)  | 
+     | -- | --  | ---------- | -------------- | ------------ | -------------- |
+     | T  |  T  |     T      |        T       |      F       |       *F*      |
+     | T  |  T  |     F      |        F       |      T       |       *T*      |
+     | T  |  F  |     T      |        F       |      T       |       *T*      |
+     | T  |  F  |     F      |        F       |      T       |       *T*      |
+     | F  |  T  |     T      |        T       |      F       |       *T*      |
+     | F  |  T  |     F      |        F       |      T       |       *T*      |
+     | F  |  F  |     T      |        F       |      T       |       *T*      |
+     | F  |  F  |     F      |        F       |      T       |       *T*      |
+
+4. This is a tough one. Using the proof checker, prove the following argument is valid:  (note that I put 
+   the premises next to each other, instead of on top of each other)
+	
+   S → ¬R, Q → R, P ∧ Q
+   
+  ----------------------------------------
+
+   ¬S
+
+    Proof:
+
+    1. S → ¬R
+    2. Q → R
+    3. P ∧ Q
+    ----------
+    4. Q        3 Simplification (^E)
+    5. R        2, 4 Modus Ponens (->E)
+    6. ¬¬R      5 Double Negation (DNE)
+    7. ¬S       1, 6 Modus Tollens (DS)
+
+5. Fill in the table below:
+
+    |    sentence      |  top-level operator |  first sub-formula   |  second sub-formula (if it exists) |
+    | --------------   | --------------------| -------------------- | -----------------------------------| 
+    | P → (Q → R)      |          →          |          P           |                Q → R               |
+    | ¬P ∧ Q           |          ∧          |         ¬P           |                  Q                 | 
+    | ¬(P → ¬(Q → R))  |          ¬          |      P → ¬(Q → R)    |                (none)              |
+    | P ∧ (¬Q ∧ R)     |          ∧          |         P            |                ¬Q ∧ R              |
+
   
 
 
