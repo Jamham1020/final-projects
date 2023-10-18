@@ -138,6 +138,7 @@ Construct a proof for the argument: R, P, P → (R → Q) ∴ Q
 ## 4.2
 
 Construct a proof for the argument: ¬P → Q, P → R, ¬R ∴ Q
+
 1	¬P → Q		
 2	P → R		
 3	¬R		
