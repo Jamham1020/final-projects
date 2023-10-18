@@ -46,8 +46,11 @@
 1. Write a direct proof for the following argument using the proof checker (proof-checker.org), and check your proof.
 
    P
+   
    P → (Q → R)
+   
    ------------
+   
    Q → R
 
        Proof:
@@ -56,12 +59,18 @@
        --------------
        3. Q → R         1,2 Modus Ponens (->E)
 
-2. Here is an argument:
+3. Here is an argument:
+   
    P → Q
+   
    P → (Q → R)
+   
    P
+   
    ------------
+   
    R
+   
   Check the validity of the argument using a truth table.
 
        Here is the truth table for the argument.
@@ -77,9 +86,10 @@
        | F  |  F  |     T      |        T       |       T       |      T      |   F    |    T    |
        | F  |  T  |     F      |        T       |       T       |      T      |   F    |    F    |
 
-       *There is only one row on which all premises are true. The conclusion** is true for that case. So, this is valid argument.
+       *There is only one row on which all premises are true. The conclusion** is true for that case. So, 
+       this is valid argument.
 
-3. Using the proof checker, create a direct proof for the argument of the previous problem. NOTE: There can be more than one way to create such a proof, try seeing if you can make two different direct proofs.
+5. Using the proof checker, create a direct proof for the argument of the previous problem. NOTE: There can be more than one way to create such a proof, try seeing if you can make two different direct proofs.
 
    Construct a proof for the argument: P → Q, P → (Q → R), P ∴ R
 
