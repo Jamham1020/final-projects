@@ -269,9 +269,9 @@
 	
    S → ¬R, Q → R, P ∧ Q
    
-  ----------------------------------------
+   ----------------------------------------
 
-   ¬S
+ ¬S
 
     Proof:
 
@@ -293,7 +293,56 @@
     | ¬(P → ¬(Q → R))  |          ¬          |      P → ¬(Q → R)    |                (none)              |
     | P ∧ (¬Q ∧ R)     |          ∧          |         P            |                ¬Q ∧ R              |
 
-  
+
+## Semantic Equivalence
+
+1. Are these two sentences semantically equivalent: ¬(P → Q) and P → ¬Q?  Use the truth table method to find out.
+
+     | P  |  Q  |    P → Q   |       ¬Q       |   ¬(P → Q)   |  P → ¬Q   | 
+     | -- | --  | ---------- | -------------- | ------------ | --------- |
+     | T  |  T  |     T      |        F       |       F      |     F     |
+     | T  |  F  |     F      |        T       |       T      |     T     |
+     | F  |  T  |     T      |        F       |       *F*    |     *T*   |
+     | F  |  F  |     T      |        T       |       *F*    |     *T*   |
+
+     ¬(P → Q) and P → ¬Q are NOT equivalent as shown in the truth table that they have different truth value.
+
+2. For which values of P and Q do these two sentences have the same truth value?
+
+   ¬P → ¬Q         ¬(¬P → Q)
+
+     | P  |  Q  |     ¬P     |       ¬Q       |   ¬(P → Q)   |  ¬P → ¬Q  |   ¬(¬P → Q)  |
+     | -- | --  | ---------- | -------------- | ------------ | --------- | ------------ |
+     | T  |  T  |     F      |        F       |       T      |    *F*    |      *F*     |
+     | T  |  F  |     F      |        T       |       T      |    *F*    |      *F*     |
+     | F  |  T  |     T      |        F       |       T      |    *F*    |      *F*     |
+     | F  |  F  |     T      |        T       |       F      |    *T*    |      *T*     |
+
+     As shown in the truth table, ¬P → ¬Q and ¬(¬P → Q) have the same truth value for all the values of P 
+     and Q. It also implies that these two sentences are equivalent.
+
+3. Is this formula a tautology?  P → (Q → P)  Use a truth table to find out.
+
+    |    P    |     Q    |   Q → P    |  *P → (Q → P)*  |
+    | ------- | -------- | ---------- | --------------  | 
+    |    T    |     T    |     T      |       *T*       |
+    |    T    |     F    |     T      |       *T*       | 
+    |    F    |     T    |     F      |       *T*       |
+    |    F    |     F    |     T      |       *T*       |
+
+     The truth table shows that this formula is a tautology.
+
+4. Is this formula a tautology?  P ∧ P
+
+    |  P  |  *P ∧ P*  |
+    | --- | --------- |
+    |  T  |    *T*    |
+    |  F  |    *F*    |
+
+    The truth table shows that is formula is NOT a tautology.
+   
+   
+
 
 
 
