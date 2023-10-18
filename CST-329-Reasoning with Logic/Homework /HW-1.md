@@ -170,5 +170,138 @@ if P then Q
 # Quiz 1 (CH 1,2,3)
 
 1. Which of the following declarative sentences are atomic?
+
+       A. My car has a red exterior and a black interior.
+       B. I will take payment by Visa or by Paypal.
+       ** C. Whales have been reported in Monterey Bay. **
+
+2. Which of the following sentences are declarative?
+
+       ** A. I cannot directly witness what is another person's mind. **
+       B. Gas or electric?
+       C.  First of all, get out of LA.
+       ** D. If you say so you will do something, do it. **
+       Declarative sentences have truth values. Only the sentence "I cannot directly witness what is in 
+       another person's mind" can be claimed to be either true or false. Other given sentences (question, 
+       command, etc) cannot be claimed as true/false.
+
+3. Every english sentence will have a truth value.
+
+       True
+       ** False **
+       Some English sentences don't have a truth value, including questions.  A question is not making a 
+       true or false assertion, so to say that a question is true is strange, (compared to an answer being 
+       true or false, as answers are often declarative sentences responding to a question).
+
+4. Which truth values for P, Q, and R make it so that the following two sentences are true?
+
+   P → (Q → R)
+   (P → Q) → R
+   (NOTE: Use a truth table... seriously, this is hard to do with perfect accuracy mentally)
    
+        ** A. P is false, Q is true, R is true **
+        ** B. P is true, Q is true, R is true **
+        C. P is false, Q is false, R is false
+        ** D. P is true, Q is false, R is false **
+
+5. Write a sentence in our logical language for
+
+"If Alex goes to the barber he will not get a perm."
+
+Use the following translation key:
+
+   P:  "Alex goes to the barber"
+
+   Q: "Alex will get a perm"
+
+      P → ¬Q
+      (P → ¬(Q))
+      P → ¬(Q)
+      P → ¬ Q
+      
+6. Do these two sentences always have the  same meaning?  (in other words, regardless of the truth of P and Q?)
+
+    ¬(P → Q)
+   
+     P → ¬Q
+
+       Yes
+       ** No **
+       If P is false and Q is false then the first sentence is false and the second sentence is true.
+   
+8. Is the following a statement about syntax or semantics?
+
+"The symbol / means division."
+
+       A. Syntax
+       ** B. Semantics **
+
+8. If P is false, and Q is false, then what is the truth value of the following sentence?
+
+   P → Q
+
+          False
+          ** True ** P → Q is true if P is false, no matter what the values of Q is.
+
+9. "If one is greater then zero, then LA is the capital of California."
+
+Using our definition of implication, is this statement true or false?
+
+       False
+       ** True ** An implication is false if the premise is true and the conclusion is false.
+
+10. Translate the following phrase into our logical language:
+
+P if Q
+
+       Q → P
+
+11. Translate the following phrase into our logical language:
+
+if P then Q
+
+       P → Q
+
+12. Write a translation key for the following sentence
+
+       "If I don't work at home then I don't eat snacks."
+
+       Use as many lines of the response template as you need.
+
+           P: I work at home
+           Q: I eat snacks
+           Logical statement: ¬P → ¬Q
+
+13.  | P  |  Q  |    P → Q   |       ¬Q       |      ¬P      |
+     | -- | --  | ---------- | -------------- | ------------ |
+     | T  |  T  |     T      |        F       |       F      |
+     | T  |  F  |     F      |        T       |       F      |
+     | F  |  T  |     T      |        F       |       T      |
+     | F  |  F  |     T      |        T       |       T      |
+
+14. Consider this argument:
+       P → Q
+    ----------
+       Q
+    (True/False)  Are the entries in the truth table correct, and is the argument valid?
+    
+     | P  |  Q  | premise P → Q   |  conclusion Q  |   
+     | -- | --  | --------------- | -------------- | 
+     | T  |  T  |     T           |        T       | 
+     | T  |  F  |     F           |        F       | 
+     | F  |  T  |     T           |        T       |
+     | F  |  F  |     T           |        F       |
+
+           A. The entries in the truth table are not correct
+           ** B. The entries in the truth table are correct, but the argument is not valid. **
+           C. The entries in the truth table are correct, and the argument is valid.
+
+           The entries in the truth table are correct, but the argument is not valid because of the last 
+           line.
+
+15.  If an argument is sound, then its conclusion is true.
+
+          ** True **
+          False
+          A sound argument is a valid argument with true premises, and will have a true conclusion.
 
