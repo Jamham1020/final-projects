@@ -132,8 +132,8 @@ Construct a proof for the argument: R, P, P → (R → Q) ∴ Q
 1.	R		
 2.	P		
 3.	P → (R → Q)		
-4.	R → Q	        2, 3	Modus Ponens (->E)
-5.	Q	           1, 4	Modus Ponens (->E)
+4.	R → Q	           2, 3	Modus Ponens (->E)
+5.	Q	              1, 4	Modus Ponens (->E)
 
 ## 4.2
 
@@ -141,10 +141,103 @@ Construct a proof for the argument: ¬P → Q, P → R, ¬R ∴ Q
 1.	¬P → Q		
 2.	P → R		
 3.	¬R		
-4.	¬P	            2, 3 Modus Tollens (DS)
-5.	Q	            1, 4 Modus Ponens	(->E)
+4.	¬P	               2, 3 Modus Tollens (DS)
+5.	Q	               1, 4 Modus Ponens	(->E)
 
+## 4.3
 
+Construct a proof for the argument: P → ¬S, R → P, S ∴ ¬R
 
+1.	P → ¬S		
+2.	R → P		
+3.	S		
+4.	¬¬S	       3 Double Negation	(DNE)
+5.	¬P	          1, 4 Modus Tollens	(DS)
+6.	¬R	          2, 5 Modus Tollens  (DS)
 
+## 4.4 
+
+Construct a proof for the argument: P, S → R, ¬R, ¬S → (P → Q) ∴ Q
+
+1.	P		
+2.	S → R		
+3.	¬R		
+4.	¬S → (P → Q)		
+5.	¬S	             2, 3 Modus Tollens	(DS)
+6.	P → Q	          4, 5 Modus Ponens	(->E)
+7.	Q	             1, 6 Modus Ponens   (->E)
+
+## 4.5
+
+Construct a proof for the argument: ¬(Q → R) → P, ¬P, Q ∴ R
+
+1.	¬(Q → R) → P		
+2.	¬P		
+3.	Q		
+4.	¬¬(Q → R)	    1, 2 Modus Tollens	(DS)
+5.	Q → R	          4 Double Negation	(DNE)
+6.	R	             3, 5 Modus Ponens   (->E)
+
+# HW 2 Reading #2
+
+1. Here is an argument:
+
+   ¬(P ∧ Q)
+   P → ¬Q
+ 
+
+   Fill out the truth table below to check the validity of the argument.
+
+    |         |          |   premise  |  conclusion   |
+    | ------- | -------- | ---------- | --------------| 
+    |    Q    |     P    |  ¬(P ∧ Q)  |     P → ¬Q    |
+    |    T    |     T    |     F      |       F       | 
+    |    T    |     F    |     T      |       T       |
+    |    F    |     T    |     T      |       T       |
+    |    F    |     F    |     T      |       T       |
+
+2. Here is an argument:
+
+   P ∧ Q
+
+   -----
+
+   P
+
+   Check the validity of the argument by filling out the truth table.
+
+    |         |          |   premise  |  conclusion   |
+    | ------- | -------- | ---------- | --------------| 
+    |    P    |     Q    |    P ∧ Q   |       P       |
+    |    T    |     T    |     T      |       T       | 
+    |    T    |     F    |     F      |       T       |
+    |    F    |     T    |     F      |       F       |
+    |    F    |     F    |     F      |       F       |
+
+    The argument is valid.  Intuitively, if P ^ Q is true, then P and Q are both true, so P is true.
+
+3. Translate the following sentence to logic:
+
+    "Smoky is an unpredictable cat".
+
+    Use this translation key:
+
+    P	Smoky is predictable
+    Q	Smoky is a cat
+
+     Q ∧ ¬P
+
+4. Suppose we have these formulas:
+
+   P → ¬R
+
+   R
+
+   Could the modus tollens rule be applied to derive another formula?
+
+   A. no
+   *B. yes, and the derived formula would be ¬P*
+   C. yes, and the derived formula would be P
+
+5. 
 
