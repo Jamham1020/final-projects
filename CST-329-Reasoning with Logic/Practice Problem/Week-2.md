@@ -96,33 +96,22 @@
        ### Proof 1:
    
         1.	P → Q
-   
         2.	P → (Q → R)
-   	
         3.	P
-   
         -------------
-   
         4.	Q	      1, 3 Modus Ponens (->E)
-   
         5.	Q → R	      2, 3 Modus Ponens (->E)
-   
         6.	R	      4, 5 Modus Ponens	(->E)
+
 
        ### Proof 2:
 
         1.	P → Q
-   
         2.	P → (Q → R)
-   	
         3.	P
-   
         -------------
-   
         4.	Q	      2, 3 Modus Ponens (->E)
-   
         5.	Q → R	      1, 3 Modus Ponens (->E)
-   
         6.	R	      4, 5 Modus Ponens	(->E)
 
 ## Modus Tollens and Double Negation
@@ -147,24 +136,23 @@
 
 2. Write and check a direct proof for the argument below using the proof checker.
    ¬P → Q                            // note: this is the same as writing (¬P) → Q
+   
    P → R
+   
    ¬R
+   
   ------------
+  
    Q
 
     Proof:
 
      1.	¬P → Q	
-   
      2.	P → R		
-   
      3.	¬R
-   
      -----------
-   
-     4.	¬P	     2, 3 Modus Tollens	(DS)
-  
-     5.	Q	       1, 4 Modus Ponens (->E)
+     4.	¬P	     2, 3 Modus Tollens (DS)
+     5.	Q	     1, 4 Modus Ponens (->E)
 
 3. Write an argument in English that corresponds to the logical argument in problem 2.  It can be on whatever appropriate subject you like.
 
