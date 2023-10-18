@@ -227,11 +227,15 @@
    
 5. If you have time, check the validity of this argument using a truth table:
 
-P → Q
-Q → R
-¬R
-------
-¬P
+   P → Q
+   
+   Q → R
+   
+   ¬R
+   
+   ------
+   
+   ¬P
 
 If the argument is not valid, explain the situations in which it is not valid.
 
