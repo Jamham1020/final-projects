@@ -105,7 +105,7 @@
    
         4.	Q	      1, 3 Modus Ponens (->E)
    
-        5.	Q → R	  2, 3 Modus Ponens (->E)
+        5.	Q → R	      2, 3 Modus Ponens (->E)
    
         6.	R	      4, 5 Modus Ponens	(->E)
 
@@ -121,7 +121,7 @@
    
         4.	Q	      2, 3 Modus Ponens (->E)
    
-        5.	Q → R	  1, 3 Modus Ponens (->E)
+        5.	Q → R	      1, 3 Modus Ponens (->E)
    
         6.	R	      4, 5 Modus Ponens	(->E)
 
