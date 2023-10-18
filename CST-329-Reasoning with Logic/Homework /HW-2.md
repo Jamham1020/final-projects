@@ -52,33 +52,33 @@
 
 5. Here is an argument:
 
-~P -> Q
+   ~P -> Q
 
-~P -> R
+   ~P -> R
 
-~Q
+   ~Q
 
-------
+   ------
 
-R
+   R
 
-Is the following a legal direct proof for the argument?
+   Is the following a legal direct proof for the argument?
 
-1.  ~P -> Q
+   1.  ~P -> Q
 
-2.  ~P -> R
+   2.  ~P -> R
 
-3.  ~Q
+   3.  ~Q
 
-------
+   ------
 
-4.  ~P       1, 3   modus tollens
+   4.  ~P       1, 3   modus tollens
 
-5.  R          2, 4  modus ponens
+   5.  R          2, 4  modus ponens
 
-        *A. no, sentence 4 was not derived correctly*
-        B. no, sentence 5 was not derived correctly
-        C. yes, the direct proof is correct
+           *A. no, sentence 4 was not derived correctly*
+           B. no, sentence 5 was not derived correctly
+           C. yes, the direct proof is correct
 
-        The problem with the proof is on line 4.  Using modus tollens you would get ~~P, not ~P. 
-        The proof skips a step in which double negation is necessary for the sake of being precise and proper. It is necessary for a complete formal proof, but often considered a "trivial" step.
+           The problem with the proof is on line 4.  Using modus tollens you would get ~~P, not ~P. 
+           The proof skips a step in which double negation is necessary for the sake of being precise and proper. It is necessary for a complete formal proof, but often considered a "trivial" step.
