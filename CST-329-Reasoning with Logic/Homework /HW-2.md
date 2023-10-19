@@ -292,7 +292,7 @@ Construct a proof for the argument: ¬(Q → R) → P, ¬P, Q ∴ R
 
 ## HW 2 Proofs #2 5.1-5.6
 
-5.1
+### 5.1
 
 Construct a proof for the argument: ¬P → ¬Q, Q ∴ P
 
@@ -302,7 +302,7 @@ Construct a proof for the argument: ¬P → ¬Q, Q ∴ P
 4.	¬¬P	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   1, 3 Modus Tollens	
 5.	P	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   4 Double Negation
 
-5.2 
+### 5.2 
 
 Construct a proof for the argument: (P ∧ Q) ∧ R ∴ Q ∧ P
 
@@ -313,5 +313,128 @@ Construct a proof for the argument: (P ∧ Q) ∧ R ∴ Q ∧ P
 5.	Q	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      2 Simplification	
 6.	Q ∧ P	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       4, 5 Adjunction
 
-5.3
+### 5.3
 
+Construct a proof for the argument: P → ¬R, Q → (S → R), P ∧ Q ∴ ¬S
+
+1.	P → ¬R		
+2.	Q → (S → R)		
+3.	P ∧ Q		
+4.	P &nbsp;&nbsp;	3 Simplification	
+5.	¬R &nbsp;&nbsp;	1, 4 Modus Ponens	
+6.	Q &nbsp;&nbsp;	3 Simplification	
+7.	S → R &nbsp;&nbsp;	2, 6 Modus Ponens	
+8.	¬S &nbsp;&nbsp; 	5, 7 Modus Tollens
+
+### 5.4 
+Construct a proof for the argument: R → (P ∧ Q), R ∧ S ∴ P
+
+1.	R → (P ∧ Q)		
+2.	R ∧ S		
+3.	R &nbsp;&nbsp;	2 Simplification	
+4.	P ∧ Q &nbsp;&nbsp;	1, 3 Modus Ponens	
+5.	P &nbsp;&nbsp; 4 Simplification
+
+### 5.5
+
+Construct a proof for the argument: ¬R → P, ¬P, Q, (¬P ∧ Q) → S ∴ R ∧ S
+
+1.	¬R → P		
+2.	¬P		
+3.	Q		
+4.	(¬P ∧ Q) → S		
+5.	¬P ∧ Q &nbsp;&nbsp;	2, 3 Adjunction	
+6.	¬¬R &nbsp;&nbsp;	1, 2 Modus Tollens	
+7.	R &nbsp;&nbsp;	6 Double Negation	
+8.	S &nbsp;&nbsp;	4, 5 Modus Ponens	
+9.	R ∧ S &nbsp;&nbsp;	7, 8 Adjunction
+
+### 5.6
+
+Construct a proof for the argument: (R → ¬P) ∧ (¬S → ¬R), R ∴ S ∧ ¬P
+
+1.	(R → ¬P) ∧ (¬S → ¬R)		
+2.	R		
+3.	R → ¬P &nbsp;&nbsp;	1 Simplification	
+4.	¬S → ¬R &nbsp;&nbsp;	1 Simplification	
+5.	¬¬R &nbsp;&nbsp;	2 Double Negation	×
+6.	¬¬S &nbsp;&nbsp;	4, 5 Modus Tollens	
+7.	S &nbsp;&nbsp;	6 Double Negation	
+8.	¬P &nbsp;&nbsp;	2, 3 Modus Ponens	
+9.	S ∧ ¬P &nbsp;&nbsp;	7, 8 Adjunction
+
+## Quiz 2 
+
+1. Create and prove the following argument using proof-checker.org.
+   Construct a proof for the argument: ¬Q → (R ∧ S), P → ¬Q, P ∴ S
+
+   1.	¬Q → (R ∧ S)		
+   2.	P → ¬Q		
+   3.	P		
+   4.	¬Q	&nbsp;&nbsp; 2, 3 Modus Ponens	
+   5.	R ∧ S	&nbsp;&nbsp; 1, 4 Modus Ponens	
+   6.	S	&nbsp;&nbsp; 5 Simplification
+
+2. If you have these formulas:
+
+   P → (Q → R), P, Q
+
+   Can you apply modus ponens?
+
+         **A. yes, and by applying modus ponens once you can derive Q → R**
+         B. yes, and by applying modus ponens once you can derive P → R
+         C. no
+         In one application of modus ponens, you can use P and P → (Q → R) to derive Q → R.
+
+3. Here is an argument:
+
+    P
+   
+    (P → Q) → (Q → R)
+   
+    Q
+   
+    -------------------
+
+    R
+
+   Is the following direct proof correct?
+
+    1. P
+    2. (P → Q) → (Q → R)
+    3. Q
+    ---
+    4. Q → R  &nbsp;&nbsp;    2, 1, modus ponens
+    5. R       &nbsp;&nbsp;        4, 3, modus ponens
+
+           A. yes
+           B. no - the problem is with the derivation of sentence 4
+           C. no - the problem is that the premises are not listed correctly
+           D. no - the problem is with the derivation of sentence 5
+       
+           The proof is not correct.  The premises are listed correctly, but the sentence 4 cannot be 
+           obtained from sentences 2 and 1 using modus ponens.
+
+4. Create and prove the following argument using proof-checker.org.
+
+   Construct a proof for the argument: ¬P → Q, ¬Q ∴ P
+
+   1.	¬P → Q		
+   2.	¬Q		
+   3.	¬¬P &nbsp;&nbsp;	1, 2 Modus Tollens	
+   4.	P &nbsp;&nbsp;	3 Double Negation
+
+   You need to use modus tollens and then double negation. First modus tollens to get ~~P from ~P -> Q and       ~Q. Then double negation to get P from ~~P.
+
+5. If an argument can be shown valid using a direct proof, it can also be shown valid using a truth table.
+
+   True
+   **False**
+   If an argument can be shown to be valid using a direct proof, it can also be shown to be valid using a 
+   truth table, but the truth table might be very large.
+   
+6. In a valid argument, it could be that the premises are false and the conclusion is true.
+   
+   **True**
+   False
+   
