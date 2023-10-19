@@ -304,7 +304,31 @@ Construct a proof for the argument: P v Q, P -> ~R, R ∴ Q
 ```
 <img width="301" alt="image" src="https://github.com/Jamham1020/final-projects/assets/64275401/4dcf7285-ec14-42f3-866b-fb0fd276ac58">
 
-5. 
+5. There is one error in the proof below.  Give the line number of the error.
+   <img width="340" alt="image" src="https://github.com/Jamham1020/final-projects/assets/64275401/6914d210-97b3-4918-a3dc-c07e826283e3">
+``` The problem is at line 7.  The sentence on line 4 is not still assumed to be true after the subproof          has ended, and is not stated to be true elsewhere.```
 
-  
+6. There is one error in the proof below.  Give the line number of the error.
+   <img width="320" alt="image" src="https://github.com/Jamham1020/final-projects/assets/64275401/71d4f586-1f38-41e6-a0dc-d39690c5a1fd">
+   ``` The problem is at line 4.  The sentence on line 4 is not a legal application of modus tollens.  Despite it meaning the same thing, to apply modus tollens we need to specify that (~Q) is not true, so you would need ~~Q, not just Q. ```
+
+7. If sentence phi is a theorem, then which of the following statements are true?
+   ```
+   A. phi is not a tautology
+   B. phi can be proved without using conditional derivation
+   ** C. phi can be proved without any premises **
+   D. phi contains no atomic sentences
+   ```
    
+8. Write two logical sentences you can derive from the following sentences by applying modus tollendo ponens (MTP):
+
+(P ∧ Q → R) v (P v (R → S))
+
+¬P
+
+¬(P ∧ Q → R)
+
+Note: Given these three logical sentences, derive a 4th sentence applying MTP. Then considering all four (the given three and your derived one), derive a 5th sentence applying MTP. Write these two logical sentences as your answer.
+
+```
+ANS: ¬R or P v (R → S) or R → S
