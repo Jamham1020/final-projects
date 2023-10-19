@@ -115,10 +115,15 @@ b:     Bubba
 Part 1: Translate the following expressions into first-order logic using the translation key below..  Don't be concerned that some of these sentences are obviously false.
 
 Translation key:
+
 domain: terrestrial organisms
+
 M(x): x is a mammal
+
 L(x): x lays eggs
+
 C(x): x has a chestnut color
+
 H(x): x is a horse
 
 1. All horses are mammals.
@@ -144,14 +149,23 @@ H(x): x is a horse
   ```∀x((C(x) ∧ H(x)) → ¬(M(x) ∧ L(x)))```
 
 Part 2: Here is a translation key:
+
 domain: living people
+
 a: Alex
+
 b: Bob
+
 c: Cara
+
 M(x): x is a mechanic
+
 N(x): x is a nurse
+
 L(x,y): x likes y
+
 T(x,y): x is taller than y
+
 Translate the following expressions into first-order logic.  Write down your answers!
 
 8. Cara is taller than Bob. ```T(c, b)```
@@ -165,11 +179,17 @@ Translate the following expressions into first-order logic.  Write down your ans
 1. Use the following translation key:
 
 F(x): x is a female
+
 G(x): x is male
+
 H(x): x is human
+
 T(x): x is from Texas
+
 S(x): x is a computer scientist
+
 L(x): x is a mammal
+
 M(x): x is mortal
 
 Translate the sentences below to logic:
@@ -182,21 +202,21 @@ Translate the sentences below to logic:
 2. Here are some more translation problems.  Assume the domain is "students at CSUMB", and the translation key is:
 
 A(x):	x is an adult
+
 B(x): 	x is a business major
+
 C(x): 	x lives on campus
+
 L(x):	x belongs to a club
+
 U(x):	x is an upper-division student
 
 - Every CSUMB student is an adult. ```∀xA(x)```
 - Some students who live on campus are upper-division students ```∃x(C(x) ∧ U(x))```
 - Some CSUMB students are not adults. ```∃x(¬A(x))```
-
 - All business majors belong to a club.```∀x(B(x) → L(x))```
-
 - No business majors who live on campus are adults.```∀x((B(x) ∧ C(x)) → (¬A(x)))```
-
 - Every upper division student is a business major who lives off campus.```∀x(U(x) → (B(x) ∧ ¬C(x))```
-
 - Some adult business majors who live on campus are upper-division students that don't belong to clubs. ```
 ∃x(A(x) ∧ B(x) ∧ C(x) ∧ U(x) ∧ ¬L(x))```
 
