@@ -132,8 +132,8 @@ Construct a proof for the argument: R, P, P → (R → Q) ∴ Q
 1.	R		
 2.	P		
 3.	P → (R → Q)		
-4.	R → Q	  &nbsp;&nbsp;     2, 3	Modus Ponens (->E)
-5.	Q	      &nbsp;&nbsp;        1, 4	Modus Ponens (->E)
+4.	R → Q	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     2, 3	Modus Ponens (->E)
+5.	Q	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        1, 4	Modus Ponens (->E)
 
 ## 4.2
 
@@ -141,8 +141,8 @@ Construct a proof for the argument: ¬P → Q, P → R, ¬R ∴ Q
 1.	¬P → Q		
 2.	P → R		
 3.	¬R		
-4.	¬P	     &nbsp;&nbsp;          2, 3 Modus Tollens (DS)
-5.	Q	     &nbsp;&nbsp;          1, 4 Modus Ponens	(->E)
+4.	¬P	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          2, 3 Modus Tollens (DS)
+5.	Q	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         1, 4 Modus Ponens	(->E)
 
 ## 4.3
 
@@ -151,9 +151,9 @@ Construct a proof for the argument: P → ¬S, R → P, S ∴ ¬R
 1.	P → ¬S		
 2.	R → P		
 3.	S		
-4.	¬¬S	&nbsp;&nbsp;       3 Double Negation	(DNE)
-5.	¬P	     &nbsp;&nbsp;     1, 4 Modus Tollens	(DS)
-6.	¬R	    &nbsp;&nbsp;      2, 5 Modus Tollens  (DS)
+4.	¬¬S	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       3 Double Negation	(DNE)
+5.	¬P	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     1, 4 Modus Tollens	(DS)
+6.	¬R	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      2, 5 Modus Tollens  (DS)
 
 ## 4.4 
 
@@ -163,9 +163,9 @@ Construct a proof for the argument: P, S → R, ¬R, ¬S → (P → Q) ∴ Q
 2.	S → R		
 3.	¬R		
 4.	¬S → (P → Q)		
-5.	¬S	    &nbsp;&nbsp;         2, 3 Modus Tollens	(DS)
-6.	P → Q	    &nbsp;&nbsp;      4, 5 Modus Ponens	(->E)
-7.	Q	      &nbsp;&nbsp;       1, 6 Modus Ponens   (->E)
+5.	¬S	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         2, 3 Modus Tollens	(DS)
+6.	P → Q	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      4, 5 Modus Ponens	(->E)
+7.	Q	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       1, 6 Modus Ponens   (->E)
 
 ## 4.5
 
@@ -174,9 +174,9 @@ Construct a proof for the argument: ¬(Q → R) → P, ¬P, Q ∴ R
 1.	¬(Q → R) → P		
 2.	¬P		
 3.	Q		
-4.	¬¬(Q → R)	&nbsp;&nbsp;    1, 2 Modus Tollens	(DS)
-5.	Q → R	   &nbsp;&nbsp;       4 Double Negation	(DNE)
-6.	R	      &nbsp;&nbsp;       3, 5 Modus Ponens   (->E)
+4.	¬¬(Q → R)	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    1, 2 Modus Tollens	(DS)
+5.	Q → R	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       4 Double Negation	(DNE)
+6.	R	      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       3, 5 Modus Ponens   (->E)
 
 # HW 2 Reading #2
 
@@ -298,20 +298,20 @@ Construct a proof for the argument: ¬P → ¬Q, Q ∴ P
 
 1.	¬P → ¬Q		
 2.	Q		
-3.	¬¬Q	&nbsp;&nbsp;   2 Double Negation	
-4.	¬¬P	&nbsp;&nbsp;   1, 3 Modus Tollens	
-5.	P	   &nbsp;&nbsp;   4 Double Negation
+3.	¬¬Q	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   2 Double Negation	
+4.	¬¬P	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   1, 3 Modus Tollens	
+5.	P	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   4 Double Negation
 
 5.2 
 
 Construct a proof for the argument: (P ∧ Q) ∧ R ∴ Q ∧ P
 
 1.	(P ∧ Q) ∧ R		
-2.	P ∧ Q	  &nbsp;&nbsp;      1 Simplification	
-3.	R	     &nbsp;&nbsp;      1 Simplification	
-4.	P	     &nbsp;&nbsp;       2 Simplification	
-5.	Q	     &nbsp;&nbsp;      2 Simplification	
-6.	Q ∧ P	  &nbsp;&nbsp;       4, 5 Adjunction
+2.	P ∧ Q	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      1 Simplification	
+3.	R	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      1 Simplification	
+4.	P	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       2 Simplification	
+5.	Q	     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      2 Simplification	
+6.	Q ∧ P	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       4, 5 Adjunction
 
 5.3
 
