@@ -132,7 +132,7 @@ Construct a proof for the argument: R, P, P → (R → Q) ∴ Q
 1.	R		
 2.	P		
 3.	P → (R → Q)		
-4.	R → Q	           2, 3	Modus Ponens (->E)
+4.	R → Q	  &nbsp;&nbsp;     2, 3	Modus Ponens (->E)
 5.	Q	              1, 4	Modus Ponens (->E)
 
 ## 4.2
