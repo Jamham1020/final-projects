@@ -16,7 +16,7 @@
    Construct a proof for the argument: P ∴ Q → P
    1 P
    2 | Q
-   3 | P	         1 Repeat (Rep)
+   3 | P	       1 Repeat (Rep)
    4 Q → P	      2–3 Conditional derivation(->I)
    
    ``` 
