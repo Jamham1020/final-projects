@@ -46,24 +46,35 @@ Bob is a poriferan.
 ## First-order logic quantifiers
 
 Please work on the following problems.  Assume the following translation key:
+
 H(x):    x is human
+
 M(x):    x is mortal
+
 a:     Ana
+
 b:     Bubba
 
 1. Translate each of the following sentence to logic:
    a. Bubba is mortal: ```M(b)```
+   
    b. if Bubba is mortal then Ana is mortal: ```M(b) -> M(a)```
+   
    c. Some humans are mortal: ```∃x(H(x) ∧ M(x))```
 
-2. Translate these two formulas to English using some translation key.  Carefully explain the difference in their meaning.
+3. Translate these two formulas to English using some translation key.  Carefully explain the difference in their meaning.
+   
    a. ∃x(H(x) ∧ M(x)): ```Some humans are mortals```
+   
    b. ∃x(H(x) → M(x)): ```For some x, if x is human, then x is mortal.```
+
    ```Difference: In sentence a, there exist x’s that are both human and mortal. In sentence b, some x that are human are also mortal. Logically the second sentence will be true even if x is not human.```
 
-3. Follow the steps of problem 2 again, but use these sentences:
+4. Follow the steps of problem 2 again, but use these sentences:
+   
    a. ∀x(H(x) ∧ M(x)): ```Everything is human and mortal```
-   b. ∀x(H(x) → M(x)): ```All human are mortals```
+
+    b. ∀x(H(x) → M(x)): ```All human are mortals```
    ```Difference: In sentence a, humanity and mortality are both qualities of x. In sentence b, mortality is a quality of humanity. Logically the second sentence is true even if x is not human.```
 
 ## Syntax of first-order logic
