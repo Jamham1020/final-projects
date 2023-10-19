@@ -394,18 +394,18 @@ Construct a proof for the argument: (R → ¬P) ∧ (¬S → ¬R), R ∴ S ∧ �
    
     Q
    
-    -------------------
+    ____________________
 
     R
 
    Is the following direct proof correct?
 
-    1. P
-    2. (P → Q) → (Q → R)
-    3. Q
-    ---
-    4. Q → R  &nbsp;&nbsp;    2, 1, modus ponens
-    5. R       &nbsp;&nbsp;        4, 3, modus ponens
+   1. P
+   2. (P → Q) → (Q → R)
+   3. Q
+   _________________________
+   4. Q → R  &nbsp;&nbsp;    2, 1, modus ponens
+   5. R       &nbsp;&nbsp;        4, 3, modus ponens
 
            A. yes
            B. no - the problem is with the derivation of sentence 4
@@ -419,22 +419,25 @@ Construct a proof for the argument: (R → ¬P) ∧ (¬S → ¬R), R ∴ S ∧ �
 
    Construct a proof for the argument: ¬P → Q, ¬Q ∴ P
 
-   1.	¬P → Q		
-   2.	¬Q		
-   3.	¬¬P &nbsp;&nbsp;	1, 2 Modus Tollens	
-   4.	P &nbsp;&nbsp;	3 Double Negation
+         1.	¬P → Q		
+         2.	¬Q		
+         3.	¬¬P &nbsp;&nbsp;	1, 2 Modus Tollens	
+         4.	P &nbsp;&nbsp;	3 Double Negation
 
    You need to use modus tollens and then double negation. First modus tollens to get ~~P from ~P -> Q and       ~Q. Then double negation to get P from ~~P.
 
 5. If an argument can be shown valid using a direct proof, it can also be shown valid using a truth table.
 
    True
+   
    **False**
+   
    If an argument can be shown to be valid using a direct proof, it can also be shown to be valid using a 
    truth table, but the truth table might be very large.
    
-6. In a valid argument, it could be that the premises are false and the conclusion is true.
+7. In a valid argument, it could be that the premises are false and the conclusion is true.
    
    **True**
+   
    False
    
