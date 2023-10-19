@@ -435,9 +435,42 @@ Construct a proof for the argument: (R → ¬P) ∧ (¬S → ¬R), R ∴ S ∧ �
    If an argument can be shown to be valid using a direct proof, it can also be shown to be valid using a 
    truth table, but the truth table might be very large.
    
-7. In a valid argument, it could be that the premises are false and the conclusion is true.
+6. In a valid argument, it could be that the premises are false and the conclusion is true.
    
    **True**
    
    False
+
+A valid argument tells us that (IF the premises are true THEN the conclusion will be true). Like any conditional, a valid argument says nothing, for or against the conclusion, regarding what will happen if the premises are false. 
+
+7. Here's an English sentence:
+
+         "Sam can go home only if he isn't from Santa Rosa"
+
+         Here's a translation key:
+
+         P: Sam can go home
+         Q: Sam is from Santa Rosa
+
+         Using the translation key, translate the sentence to a logical sentence.  Your answer should be a             logical sentence.
+
+         ANS: P → ¬Q
+
+8. If sentence phi is a tautology containing atomic sentences P and Q, then which of the following are true?
+```
+   A. phi is false when P and Q are both false
+  ** B. phi is true no matter what values of P and Q have **
+   C. phi is true only when P and Q are both true
+```
+
+9. We are starting a proof with the following premises
+
+   (P ∧ Q) → ¬R, P ∧ Q
+
+   Which of these rules could possibly be applied to get our next sentence?
+
+   A. double negation
+   B. modus ponens
+   C. modus tollens
+   D. adjunction
    
