@@ -469,8 +469,23 @@ A valid argument tells us that (IF the premises are true THEN the conclusion wil
 
    Which of these rules could possibly be applied to get our next sentence?
 
-   A. double negation
-   B. modus ponens
+```
+   ** A. double negation **
+   ** B. modus ponens **
    C. modus tollens
-   D. adjunction
-   
+   ** D. adjunction **
+   Double negation can be applied to any sentence.
+
+   Modus ponens could be applied using both sentences to obtain ~R.
+
+   Adjunction could be applied to both sentences to obtain (P ^ Q -> R) ^ (P ^ R)
+
+   Modus tollens can't be applied.
+```   
+
+10. What is the top level operator of the logical sentence ¬(P → (Q ∧ R)) ?
+```
+    A. →
+    B. ∧
+    ** C. ¬ **
+```
