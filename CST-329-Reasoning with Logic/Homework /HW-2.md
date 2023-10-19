@@ -235,9 +235,83 @@ Construct a proof for the argument: ¬(Q → R) → P, ¬P, Q ∴ R
 
    Could the modus tollens rule be applied to derive another formula?
 
-   A. no
-   *B. yes, and the derived formula would be ¬P*
-   C. yes, and the derived formula would be P
+         A. no
+         *B. yes, and the derived formula would be ¬P*
+         C. yes, and the derived formula would be P
 
-5. 
+5. Suppose we have these formulas:
+
+   ¬(P → Q) → R
+
+   ¬R
+
+   Could the modus tollens rule be applied to derive another formula?
+   
+         *A. yes, and the derived formula would be ~~(P -> Q)*
+         B. yes, and the derived formula would be P -> Q
+         C. no
+
+6. Consider the following argument:
+
+   P ∧ (Q ∧ R)
+   ___________
+   Q ∧ P
+   
+   Can the conclusion be derived from the premise using only one application of an inference rule? (Of    
+   course, only the inference rules we've defined in class can be used.)
+   
+         Yes
+         *No*
+
+7. What is the top level operator of the logical sentence ¬(P → (Q ∧ R)) ?
+
+         A. →
+         B. ∧
+         ** C. ¬ **
+
+8. Translate the following sentence to logic:
+
+   "I will not eat chocolate and I will not be happy."
+
+   P	I will eat chocolate
+   
+   Q	I will be happy
+
+   ANS: ¬P ∧ ¬Q
+
+9. What does it mean for two sentences to be "equivalent"?
+
+         A. They contain the same atomic sentences
+         B. They contain the same logical operators
+         ** C. If their atomic sentences are given the same truth values, then the two formulas will have 
+            the same truth values. **
+         D. They look exactly the same.
+
+         "equivalence" (or "logical equivalence") means that the two sentences have the same truth values. Sec 5.6
+
+
+## HW 2 Proofs #2 5.1-5.6
+
+5.1
+
+Construct a proof for the argument: ¬P → ¬Q, Q ∴ P
+
+1.	¬P → ¬Q		
+2.	Q		
+3.	¬¬Q	   2 Double Negation	
+4.	¬¬P	   1, 3 Modus Tollens	
+5.	P	      4 Double Negation
+
+5.2 
+
+Construct a proof for the argument: (P ∧ Q) ∧ R ∴ Q ∧ P
+
+1.	(P ∧ Q) ∧ R		
+2.	P ∧ Q	        1 Simplification	
+3.	R	           1 Simplification	
+4.	P	           2 Simplification	
+5.	Q	           2 Simplification	
+6.	Q ∧ P	        4, 5 Adjunction
+
+5.3
 
