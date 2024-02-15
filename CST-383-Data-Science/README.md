@@ -17,6 +17,7 @@ At the end of this class, you'll be able to execute a data science project from 
 ## Final Project:
 
 Analyzing Symptoms for Early Diabetes Detection
+
 Our team undertook this project to address the need for data science and visualization techniques in improving diabetes detection and prediction by leveraging data science and visualization techniques. According to American Diabetes Association approximately 37.3 million Americans affected by diabetes, which accounts for 11.3% of the population, and around 1.9 million individuals living with type 1 diabetes, including about 244,000 children and adolescents, the significance of effective disease management cannot be overstated. By providing valuable insights through analytical methods and visualizations, our goal was to empower healthcare professionals to improve outcomes for individuals affected by diabetes.
 
 ## Textbook: 
